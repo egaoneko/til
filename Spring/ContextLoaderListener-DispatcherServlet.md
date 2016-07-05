@@ -58,32 +58,33 @@
              <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 </listener>
 <context-param>
-             <param-name>contextConfigLocation</param-name>
-<param-value>/WEB-INF/ insa-context.xml
-               /WEB-INF/ sale-context.xml
-</param-value>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+        /WEB-INF/ insa-context.xml
+        /WEB-INF/ sale-context.xml
+    </param-value>
 </context-param>
 
 <!—인사관리 -->
 <servlet>
-             <servlet-name>insaServlet</servlet-name>
-<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <servlet-name>insaServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-             <servlet-name> insaServlet </servlet-name>
-             <url-pattern>/insa</url-pattern>
+    <servlet-name> insaServlet </servlet-name>
+    <url-pattern>/insa</url-pattern>
 </servlet-mapping>
 
 <!—영업관리 -->
 <servlet>
-             <servlet-name>saleServlet</servlet-name>
-<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-             </servlet>
+    <servlet-name>saleServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
 
 <servlet-mapping>
-             <servlet-name> saleServlet </servlet-name>
-             <url-pattern>/sale</url-pattern>
+    <servlet-name> saleServlet </servlet-name>
+    <url-pattern>/sale</url-pattern>
 </servlet-mapping>
 ```
 
