@@ -97,3 +97,4 @@ web.xml에 설정한다.
 * [자바 웹 개발 워크북](http://book.naver.com/bookdb/book_detail.nhn?bid=7623127)
 * [JNDI(Java Naming Directory Interface) 데이타베이스 다루는 방법](http://kenu.github.io/tomcat70/docs/jndi-datasource-examples-howto.html)
 * [Tomcat 7 환경에서 JNDI DataSource + Spring 연동 방법](http://beyondj2ee.tumblr.com/post/14508592466/tomcat-7-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-jndi-datasource-spring-%EC%97%B0%EB%8F%99-%EB%B0%A9%EB%B2%95)
+* [[Spring 레퍼런스] 13장 JDBC를 사용한 데이터 접근 #1](https://blog.outsider.ne.kr/882)
