@@ -97,9 +97,12 @@
 ```
 
 ### Reference
+* [Ehcache Documentation](http://www.ehcache.org/documentation/)
+* [XML Configuration](http://www.ehcache.org/generated/2.10.2/html/ehc-all/#page/Ehcache_Documentation_Set%2Fco-cfgbasics_xml_configuration.html%23)
 * [Example web.xml Configuration](http://www.ehcache.org/generated/2.10.2/html/ehc-all/#page/Ehcache_Documentation_Set%2Fre-sam_webxml_configuration_example.html%23)
 * [Code Samples](http://www.ehcache.org/documentation/2.8/code-samples.html)
 * [Ehcache Usage & Example(Basic)](http://jdm.kr/blog/207)
+* [EhCache](http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte2:fdl:ehcache)
 * [EHCache를 이용한 캐시 구현](http://javacan.tistory.com/entry/133)
 * [Spring Caching and Ehcache example](http://www.mkyong.com/spring/spring-caching-and-ehcache-example/)
 * [Spring 3.1과 ehcache](https://sonegy.wordpress.com/2011/12/29/spring-3-1%EA%B3%BC-ehcache/)
