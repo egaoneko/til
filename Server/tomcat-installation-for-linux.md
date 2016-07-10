@@ -62,6 +62,12 @@ export JAVA_HOME CLASSPATH PATH CATALINA_HOME
 sudo chown userId:groupId /usr/local/server/apache-tomcat-7.0.70 -R
 ```
 
+### JNDI 설정
+
+JNDI 설정이 필요하다면 하단의 문서를 참조하여 설정한다.
+
+[JNDI 설정](../Spring/jndi-configuration-with-spring.md)
+
 ### Reference
 
 * [CentOS 6.5 리눅스에 JSP 서비스를 위한 Tomcat 설치하기](http://luckyyowu.tistory.com/124)
