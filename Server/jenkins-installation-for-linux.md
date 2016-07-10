@@ -90,6 +90,7 @@ Github를 통해 소스를 Deploy하기 위해 Github에 있는 ``Respository UR
 
 ### Reference
 
+* [젠킨스 설치 및 설정](http://www.slideshare.net/sunnykwak90/ss-59330863)
 * [[jenkins] 설치 및 배포](http://blog.woniper.net/201)
 * [[Jenkins] 설치후 Security 설정하기](http://mobicon.tistory.com/145)
 * [Jenkin 설치 및 설정하기](http://sayingublog.blogspot.kr/2015/06/jenkin.html)
