@@ -1,6 +1,7 @@
 # JNDI 설정 & Spring 연동
 
 ### JNDI란?
+
 * JNDI는 Java Naming and Directory Interface의 약자이다.
 * 디렉터리 서비스에 접근하는데 필요한 API이며 애플리케이션은 이 API를 사용하여 서버의 자원을 찾을 수 있다. 여기서 자원이라함은 데이터베이스 서버나 메시징 시스템과 같이 다른 시스템과의 연결을 제공하는 객체이다. 특히 JDBC 자원을 데이터 소스라고 부른다.
 * 자원을 서버에 등록할 떄는 고유한 JNDI 이름을 붙인다. JNDI 이름은 사용자에게 친숙한 디렉터리 경로 형태를 가진다. (예: JDBC 자원 -> jdbc/mydb)
@@ -21,6 +22,8 @@
 
 ``tomcat-jdbc.jar`` 라이브러리를 ``%TOMCAT_HOME%/lib`` 디렉토리로 복사한다.
 
+[tomcat jdbc downloads](http://people.apache.org/~fhanik/jdbc-pool/)
+
 **Tomcat 7.x 이전 버전**
 
 * commons-dbcp.jar
@@ -32,7 +35,23 @@
 * tomcat-jdbc.jar
 * 3rd driver library (oracle, ms-sql, mysql, db2)
 
+#### 3rd driver library
+
+##### Java MySQL Connector
+
+하단의 링크에서 mysql driver library 다운로드하여 ``%TOMCAT_HOME%/lib`` 디렉토리로 복사한다.
+
+[Java MySQL Connector Downloads](http://dev.mysql.com/downloads/connector/j/)
+
+```bash
+wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.39.tar.gz
+tar xvfz mysql-connector-java-5.1.39.tar.gz
+cd mysql-connector-java-5.1.39.tar.gz
+mv mysql-connector-java-5.1.39-bin.jar %TOMCAT_HOME%/lib
+```
+
 ### server.xml에서 DataSource 설정 하기
+
 ``%TOMCAT_HOME%/conf/server.xml``에 있는 ``<GlobalNamingResources>``
 에 DataSource를 추가한다.
 
@@ -59,6 +78,7 @@
 * 여기서 ``<Resource>`` 부분을 ``%TOMCAT_HOME%/conf/context.xml``에 되는 것 같다.
 
 ### context.xml에서 DataSource 링크 설정
+
 ``%TOMCAT_HOME%/conf/context.xml``에 있는 ``<Context>``
 에 ResourceLink를 추가한다.
 
@@ -71,6 +91,7 @@
 ```
 
 ### web.xml에서 DataSource 참조 설정 하기
+
 context.xml에 선언된 DataSource를 님들의 웹 어플리케이션에서 쓸 수 있도록
 web.xml에 설정한다.
 (※ 반드시 ``<Context>``의 안에 선언된 ``<ResourceLink>`` 태그의 ``name``속성의 같과
