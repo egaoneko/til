@@ -56,6 +56,12 @@ export JAVA_HOME CLASSPATH PATH CATALINA_HOME
 /usr/local/server/tomcat/bin/shutdown.sh
 ```
 
+### Tomcat 사용자계정 권한 설정
+
+```bash
+sudo chown userId /usr/local/server/apache-tomcat-7.0.70 -R
+```
+
 ### Reference
 
 * [CentOS 6.5 리눅스에 JSP 서비스를 위한 Tomcat 설치하기](http://luckyyowu.tistory.com/124)
