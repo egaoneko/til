@@ -59,7 +59,7 @@ export JAVA_HOME CLASSPATH PATH CATALINA_HOME
 ### Tomcat 사용자계정 권한 설정
 
 ```bash
-sudo chown userId /usr/local/server/apache-tomcat-7.0.70 -R
+sudo chown userId:groupId /usr/local/server/apache-tomcat-7.0.70 -R
 ```
 
 ### Reference
