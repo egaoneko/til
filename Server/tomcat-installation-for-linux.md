@@ -68,6 +68,19 @@ JNDI 설정이 필요하다면 하단의 문서를 참조하여 설정한다.
 
 [JNDI 설정](../Spring/jndi-configuration-with-spring.md)
 
+### 배포
+
+* 톰캣 중지 -> 배포 -> 톰캣 시작
+
+```bash
+jar xvf websample.zip
+/usr/local/server/tomcat/bin/shutdown.sh
+rm -rf /usr/local/server/apache-tomcat-7.0.70/webapps/websample/
+mv websample /usr/local/server/apache-tomcat-7.0.70/webapps/
+rm -f websample.zip
+/usr/local/server/tomcat/bin/startup.sh
+```
+
 ### Reference
 
 * [CentOS 6.5 리눅스에 JSP 서비스를 위한 Tomcat 설치하기](http://luckyyowu.tistory.com/124)
