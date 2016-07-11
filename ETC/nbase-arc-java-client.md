@@ -61,6 +61,24 @@ public void usage() {
 }
 ```
 
+### connectionFactory 찾을 수 없는 경우
+
+```xml
+<bean id="redisTemplate" class="com.navercorp.redis.cluster.spring.StringRedisClusterTemplate">
+    <property name="connectionFactory" ref="redisClusterConnectionFactory"/>
+</bean>
+```
+
+```xml
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-redis</artifactId>
+    <version>1.3.5.RELEASE</version>
+</dependency>
+```
+
+위와 같은 설정에서 ``connectionFactory``를 찾을 수 없는 경우에는 ``spring-data-redis``를 ``pom.xml``에 추가하면 해결된다.
+
 ### Reference
 
 * [nBase-ARC github](https://github.com/naver/nbase-arc)
