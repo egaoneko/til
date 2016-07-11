@@ -88,6 +88,17 @@ Github를 통해 소스를 Deploy하기 위해 Github에 있는 ``Respository UR
 
 생성된 프로젝트가 build 후 deploy가 되는 것을 볼 수 있다.
 
+### Freestyle project로 생성하는 경우에 Maven build 설정 (새로운 Item > Item 이름 입력 > Freestyle project)
+
+![freestyle-maven](../img/Server/jenkins-installation-for-linux/freestyle-maven.png)
+
+Freestyle project로 생성해서 Maven을 사용하여 build해야 되는 경우에는 ``Add build step``으로 ``Invoke top-level Maven targets``을 추가하고 ``Maven Version``과 ``Goals``을 설정해준다.
+
+```
+Maven Version : M2_HOME
+Goals : clean install
+```
+
 ### Reference
 
 * [젠킨스 설치 및 설정](http://www.slideshare.net/sunnykwak90/ss-59330863)
@@ -95,3 +106,4 @@ Github를 통해 소스를 Deploy하기 위해 Github에 있는 ``Respository UR
 * [[Jenkins] 설치후 Security 설정하기](http://mobicon.tistory.com/145)
 * [Jenkin 설치 및 설정하기](http://sayingublog.blogspot.kr/2015/06/jenkin.html)
 * [How to deploy Maven based war file to Tomcat](http://www.mkyong.com/maven/how-to-deploy-maven-based-war-file-to-tomcat/)
+* [Jenkins 에서 Build a maven2/3 project 로 job 설정하기](http://blog.nuriware.com/archives/934)
