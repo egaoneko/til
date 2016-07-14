@@ -37,7 +37,7 @@ Duplicate code results : **/cpd.xml
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-pmd-plugin</artifactId>
-	<version>2.3</version>
+	<version>3.6</version>
 	<configuration>
 		<linkXref>true</linkXref>
 		<sourceEncoding>utf-8</sourceEncoding>
@@ -51,3 +51,4 @@ Duplicate code results : **/cpd.xml
 
 * [Maven PMD Reporting Plugin](http://www.xenomity.com/93)
 * [BTS & QP wiki](http://devcafe.nhncorp.com/QPTalk/wiki_1/entry/Hudson/Java/CPD%20%EC%97%B0%EB%8F%99)
+* [pmd:pmd](https://maven.apache.org/plugins/maven-pmd-plugin/pmd-mojo.html)
