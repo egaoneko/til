@@ -3,7 +3,10 @@
 ### AngularJS
 * [Tutorial](https://docs.angularjs.org/tutorial)
 * [Bootstrap](https://docs.angularjs.org/guide/bootstrap)
+* [What are Scopes?](https://docs.angularjs.org/guide/scope)
+* [$rootScope](https://docs.angularjs.org/api/ng/service/$rootScope)
 * [$rootScope.Scope](https://docs.angularjs.org/api/ng/type/$rootScope.Scope)
+* [What are Directives?](https://docs.angularjs.org/guide/directive)
 * [Understanding Components](https://docs.angularjs.org/guide/component)
 * [Understanding Dependency Injection](https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection)
 * [Animations](https://docs.angularjs.org/guide/animations)
