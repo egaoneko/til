@@ -83,7 +83,20 @@ canvas.onmousewheel = function(e) {
 
 Firefox에서는 ``mousewheel``를 사용할 수 없다. ``mousewheel``대신 ``DOMMouseScroll`` 이벤트를 등록한다. 또한 ``wheelDelta`` 대신에 ``detail``를 사용한다.
 
+```javascript
+var myimage = document.getElementById("element");
+if (myimage.addEventListener) {
+	// IE9, Chrome, Safari, Opera
+	myimage.addEventListener("mousewheel", MouseWheelHandler, false);
+	// Firefox
+	myimage.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+}
+// IE 6/7/8
+else myimage.attachEvent("onmousewheel", MouseWheelHandler);
+```
+
 ### Reference
 
 * [mousewheel](https://developer.mozilla.org/en-US/docs/Web/Events/mousewheel)
 * [DOMMouseScroll](https://developer.mozilla.org/en-US/docs/Web/Events/DOMMouseScroll)
+* [How to Use the Mouse Wheel Event in HTML5 Pages](https://www.sitepoint.com/html5-javascript-mouse-wheel/)
