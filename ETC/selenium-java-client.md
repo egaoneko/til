@@ -118,3 +118,38 @@ ul/li[contains(text(), "Second")]
 ul/li[text() = 'Second']
 ```
 
+#### wait load
+
+```java
+try {
+    Thread.sleep(3000);
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
+```
+
+#### select a iframe
+
+* [How to select a frame using selenium?](http://stackoverflow.com/questions/18366689/how-to-select-a-frame-using-selenium)
+
+```java
+driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'FUN_UnitList_FilterByLevelIndexOne')]"));
+```
+
+#### selectWindow(null)
+
+selectWindow함수가 없는 경우에 자식 윈도우로 이동해서 처리한다.
+
+```java
+// 자식 윈도우 이동
+        String parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+        String subWindowHandler = null;
+
+        Set<String> handles = driver.getWindowHandles(); // get all window handles
+        Iterator<String> iterator = handles.iterator();
+        while (iterator.hasNext()){
+            subWindowHandler = iterator.next();
+            driver.switchTo().window(subWindowHandler);
+            ... Do something ...
+        }
+```
