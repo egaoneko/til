@@ -1,4 +1,4 @@
-# bind 메서드
+# bind method
 
 ```javascript
 fun.bind(thisArg[, arg1[, arg2[, ...]]])
