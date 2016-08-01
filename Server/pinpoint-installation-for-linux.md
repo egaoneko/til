@@ -45,8 +45,25 @@ $HBASE_HOME/bin/hbase shell hbase-create.hbase
 
 * [github issue](https://github.com/naver/pinpoint/issues/1000)
 
+#### HBase와 ZooKeeper 관계성(의존)
+
+* HBase는 ZooKeeper(분산 상호조정)에 의존적이며 기본적으로 ZooKeeper 인스턴스를 사용하여 전반적인 클러스터 상태를 관리
+* ZooKeeper를 통해서 리전(RegionServer) 할당
+
+##### ZooKeeper 중지시 에러 발생
+
+HBase Shell 실행중 주키퍼 접속이 되지 않을때, list 검색은 되지만 테이블 신규  생성은 되지 않음
+
+```
+2015-05-18 09:56:17,825 INFO  [main] Configuration.deprecation: hadoop.native.lib is deprecated. Instead, use io.native.lib.available
+2015-05-18 09:56:38,614 ERROR [main] zookeeper.RecoverableZooKeeper: ZooKeeper exists failed after 4 attempts
+2015-05-18 09:56:38,615 WARN  [main] zookeeper.ZKUtil: hconnection-0x3e5e898b0x0, quorum=localhost:2181, baseZNode=/hbase Unable to set watcher on znode (/hbase/hbaseid)
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+```
+
 ### Reference
 
 * [Pinpoint GitHub](https://github.com/naver/pinpoint)
 * [D2 Hellow world](http://d2.naver.com/helloworld/1194202)
 * [Naver Pinpoint 소개 및 설치(2) - Pinpoint 설치](http://dev2.prompt.co.kr/34)
+* [HDFS - HBase 설치](http://develop.sunshiny.co.kr/887)
