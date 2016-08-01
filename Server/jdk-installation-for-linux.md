@@ -51,6 +51,58 @@ java -version
 javac -version
 ```
 
+### yum을 이용하여 jdk 설치하기
+
+##### OpenJDK Runtime Environment (Java SE 6)
+
+```bash
+yum install java-1.6.0-openjdk
+```
+
+##### OpenJDK Runtime Environment (Java SE 7)
+
+```bash
+yum install java-1.7.0-openjdk
+```
+
+##### OpenJDK Development Environment (Java SE 7)
+
+```bash
+yum install java-1.7.0-openjdk-devel
+```
+
+##### OpenJDK Development Environment (Java SE 6)
+
+```bash
+yum install java-1.6.0-openjdk-devel
+```
+
+#### Update for Java 8
+
+##### OpenJDK Runtime Environment (Java SE 8)
+
+```bash
+yum install java-1.8.0-openjdk
+```
+
+##### OpenJDK Development Environment (Java SE 8)
+
+```bash
+yum install java-1.8.0-openjdk-devel
+```
+
+##### OpenJDK Runtime Environment - Headless (Java SE 8)
+
+```bash
+yum install java-1.8.0-openjdk-headless
+```
+
+#### yum을 통해 설치한 java의 directory
+
+```bash
+/usr/lib/jvm/jdk-version/bin/java
+```
+
 ### Reference
 
 * [CentOS 6.5 리눅스에 JSP 서비스를 위한 JDK 설치하기](http://originalchoi.tistory.com/19)
