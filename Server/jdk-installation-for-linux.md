@@ -100,7 +100,7 @@ yum install java-1.8.0-openjdk-headless
 #### yum을 통해 설치한 java의 directory
 
 ```bash
-/usr/lib/jvm/jdk-version/bin/java
+/usr/lib/jvm/jdk-version
 ```
 
 ### Reference
