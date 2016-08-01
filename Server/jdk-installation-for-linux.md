@@ -5,6 +5,8 @@
 * [JDK downloads page - Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [인증없이 Java JDK 다운로드 하기](./downloading-java-jdk-without-certification.md)
 
+JDK 1.6 이하 버전은 이 [Java Archive](http://www.oracle.com/technetwork/java/javase/archive-139210.html)에서 받을 수 있다.
+
 ### 압축 풀기
 
 ```bash
