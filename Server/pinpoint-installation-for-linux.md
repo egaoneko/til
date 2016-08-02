@@ -119,6 +119,16 @@ PINPOINT_APPLICATION_NAME={Application Name} # "test.server"
 CATALINA_OPTS=" -javaagent:$PINPOINT_AGENT_HOME/pinpoint-bootstrap-`cat $PINPOINT_AGENT_HOME/VERSION`.jar -Dpinpoint.agentId=$PINPOINT_AGENT_ID -Dpinpoint.applicationName=$PINPOINT_APPLICATION_NAME"
 ```
 
+### ERR_BLOCKED_BY_CLIENT
+
+```
+Failed to load resource: net::ERR_BLOCKED_BY_CLIENT
+
+http://localhost:28080/scripts/extra/google-analytics.js?v=1470035904889
+```
+
+브라우저의 ad-block 플러그인을 종료하면 정상 작동한다.
+
 ### Reference
 
 * [Pinpoint GitHub](https://github.com/naver/pinpoint)
