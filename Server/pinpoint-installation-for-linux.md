@@ -107,6 +107,11 @@ hbase java.net.BindException: Cannot assign requested address
 
 **TestApp** - Run `quickstart/bin/stop-testapp.sh`
 
+### Check Status
+
+* Web UI - http://localhost:28080
+* TestApp - http://localhost:28081
+
 ### agent 설정
 
 ``{$TOMCAT_HOME}/bin/setenv/sh`` 에 아래와 같이 세팅한다. 그리고 해당 경로에 ``pinpoint.config`` 파일에 ``collector Server ip``를 수정하고 톰캣을 실행시킨다.
