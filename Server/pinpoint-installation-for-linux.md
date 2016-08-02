@@ -112,11 +112,13 @@ hbase java.net.BindException: Cannot assign requested address
 ``{$TOMCAT_HOME}/bin/setenv/sh`` 에 아래와 같이 세팅한다. 그리고 해당 경로에 ``pinpoint.config`` 파일에 ``collector Server ip``를 수정하고 톰캣을 실행시킨다.
 
 ```bash
-PINPOINT_AGENT_HOME={Pinpoint Agent 경로} # "/home1/user/pinpoint/quickstart/agent/target/pinpoint-agent"
-PINPOINT_AGENT_ID={Agent ID} # "$HOSTNAME.tomcat1"
-PINPOINT_APPLICATION_NAME={Application Name} # "test.server"
+AGENT_HOME={Pinpoint Agent 경로} # "/home1/user/pinpoint/quickstart/agent/target/pinpoint-agent"
+VERSION={VERSION} # "1.6.0-SNAPSHOT"
+AGENT_ID={Agent ID} # "$HOSTNAME.tomcat1"
+APPLICATION_NAME={Application Name} # "test.server"
 
-CATALINA_OPTS=" -javaagent:$PINPOINT_AGENT_HOME/pinpoint-bootstrap-`cat $PINPOINT_AGENT_HOME/VERSION`.jar -Dpinpoint.agentId=$PINPOINT_AGENT_ID -Dpinpoint.applicationName=$PINPOINT_APPLICATION_NAME"
+CATALINA_OPTS="$CATALINA_OPTS -javaagent:$AGENT_PATH/pinpoint-bootstrap-$VERSION.jar"
+CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.agentId=$AGENT_ID"
 ```
 
 ### ERR_BLOCKED_BY_CLIENT
