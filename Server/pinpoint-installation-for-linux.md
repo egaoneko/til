@@ -112,12 +112,38 @@ hbase java.net.BindException: Cannot assign requested address
 * Web UI - http://localhost:28080
 * TestApp - http://localhost:28081
 
-### agent 설정
+### Pinpoint Collector
+
+```pinpoint-collector-$VERSION.war```를 어플리케이션으로 배포한다
+
+``WEB-INF/classes/`` 아래있는 ``pinpoint-collector.properties``, ``hbase.properties`` 들을 설정한다.
+
+* pinpoint-collector.properties - contains configurations for the collector. Check the following values with the agent's configuration options :
+ * collector.tcpListenPort (agent's profiler.collector.tcp.port - default: 9994)
+ * collector.udpStatListenPort (agent's profiler.collector.stat.port - default: 9995)
+ * collector.udpSpanListenPort (agent's profiler.collector.span.port - default: 9996)
+* hbase.properties - contains configurations to connect to HBase.
+ * hbase.client.host (default: localhost)
+ * hbase.client.port (default: 2181)
+
+### Pinpoint Web
+
+```pinpoint-web-$VERSION.war```를 ROOT 어플리케이션으로 배포한다.
+
+``WEB-INF/classes/`` 아래있는 ``hbase.properties`` 을 설정한다.
+
+* hbase.properties - contains configurations to connect to HBase.
+ * hbase.client.host (default: localhost)
+ * hbase.client.port (default: 2181)
+
+### Pinpoint Agent
+
+``$PINPOINT_PATH/agent/target/pinpoint-agent``를 적당한 폴더로 이동한다.
 
 ``{$TOMCAT_HOME}/bin/setenv/sh`` 에 아래와 같이 세팅한다. 그리고 해당 경로에 ``pinpoint.config`` 파일에 ``collector Server ip``를 수정하고 톰캣을 실행시킨다.
 
 ```bash
-AGENT_HOME={Pinpoint Agent 경로} # "/home1/user/pinpoint/quickstart/agent/target/pinpoint-agent"
+AGENT_PATH={Pinpoint Agent 경로} # "/home1/user/pinpoint/quickstart/agent/target/pinpoint-agent"
 VERSION={VERSION} # "1.6.0-SNAPSHOT"
 AGENT_ID={Agent ID} # "$HOSTNAME.tomcat1"
 APPLICATION_NAME={Application Name} # "test.server"
@@ -125,6 +151,8 @@ APPLICATION_NAME={Application Name} # "test.server"
 CATALINA_OPTS="$CATALINA_OPTS -javaagent:$AGENT_PATH/pinpoint-bootstrap-$VERSION.jar"
 CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.agentId=$AGENT_ID"
 ```
+
+
 
 ### ERR_BLOCKED_BY_CLIENT
 
