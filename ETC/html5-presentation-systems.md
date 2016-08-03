@@ -10,6 +10,13 @@
 * [GitHub](https://github.com/hakimel/reveal.js)
 * [Online Editor](https://slides.com/?ref=github)
 
+#### Shortcut
+
+* Fullscreen : F
+* Overview : Esc, o
+* Speakerview : S
+* Zoom : Alt + click
+
 ### Impress.js
 
 [prezi](https://prezi.com/)같은 프레젠테이션을 만들 수 있게 해주는 프레젠테이션 프레임워크이다. Reveal.js에 비하여 어렵지만 강렬한 효과를 보여줄 수 있다.
