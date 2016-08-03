@@ -81,6 +81,38 @@ rm -f websample.zip
 /usr/local/server/tomcat/bin/startup.sh
 ```
 
+### 복수 톰캣 설치
+
+```
+/usr/local/server/tomcat/bin/startup.sh
+/usr/local/server/tomcat/bin/shutdown.sh
+```
+상단의 shell에 아래의 코드를 삽입한다.
+
+```bash
+export CATALINA_HOME=/usr/local/server/tomcat1
+export TOMCAT_HOME=/usr/local/server/tomcat1
+export CATALINA_BASE=/usr/local/server/tomcat1
+CATALINA_PID=/usr/local/server/tomcat1/bin/tomcat.pid
+```
+
+``/usr/local/server/tomcat/server.xml``의 포트를 변경한다.
+
+```xml
+<Server port="18005" shutdown="SHUTDOWN">
+</Server>
+
+<Connector port="18080" protocol="HTTP/1.1"
+           connectionTimeout="20000"
+           redirectPort="8445" />
+
+<Connector port="18009" protocol="AJP/1.3" redirectPort="8445" />
+```
+
+### root context로 배포
+
+``ROOT.war``로 배포한다.
+
 ### Reference
 
 * [CentOS 6.5 리눅스에 JSP 서비스를 위한 Tomcat 설치하기](http://luckyyowu.tistory.com/124)
