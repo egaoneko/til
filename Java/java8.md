@@ -443,7 +443,7 @@ Files.walk(new File(".").toPath())
      .forEach(System.out::println);
 ```
 
-* ``RuntimeException을`` 확장한 ``IOException``인 새로운 클래스의 ``UncheckedIOException`` 추가
+* ``RuntimeException``을 확장한 ``IOException``인 새로운 클래스의 ``UncheckedIOException`` 추가
 * 클로징 가능한 ``CloseableStream``이 추가
 
 
