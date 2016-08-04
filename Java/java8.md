@@ -327,7 +327,7 @@ TimeZone zone = TimeZone.getTimeZone("Seoul/Asia"); // "Asia/Seoul"을 잘 못 �
 * 잘못 된 시간대 ID 지정에는 ``IllegalArguementException``을 던짐
 * 날짜 및 시간 형식으로  ``Instant``, ``LocalDate``, ``LocalDateTime``, ``ZonedDateTime``이 추가
 * 날짜와 시간 이외의 것으로서 ``Duration``과 ``Period``가 추가
-* ``Month``, ``DayOfWeek``, ``Year``, ``Month YearMonth``, MonthDay, OffsetTime, OffsetDateTime등의 값 형식 추가
+* ``Month``, ``DayOfWeek``, ``Year``, ``Month YearMonth``, ``MonthDay``, ``OffsetTime``, ``OffsetDateTime``등의 값 형식 추가
 * 날짜/시간 클래스는 대부분이 JDBC에서 지원됨으로서 RDB연동의 효율적인 구현이 가능
 
 * [Java SE 8 Date and Time - Oracle](http://www.oracle.com/technetwork/articles/java/jf14-date-time-2125367.html)
