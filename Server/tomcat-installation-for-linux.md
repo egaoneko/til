@@ -113,6 +113,10 @@ CATALINA_PID=/usr/local/server/tomcat1/bin/tomcat.pid
 
 ``ROOT.war``로 배포한다.
 
+### tomcat 환경 변수
+
+[Tomcat environment variables](./tomcat-environment-variables.md)
+
 ### Reference
 
 * [CentOS 6.5 리눅스에 JSP 서비스를 위한 Tomcat 설치하기](http://luckyyowu.tistory.com/124)
