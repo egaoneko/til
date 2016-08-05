@@ -38,7 +38,7 @@ CATALINA_OPTS="$CATALINA_OPTS -server -d64 -Xms1G -XX:PermSize=128m -XX:MaxPermS
 
 * -Xms<size> : Java Heap의 최초 크기(Start Size)를 지정한다. Java Heap은 -Xms 옵션으로 지정한 크기로 시작하며 최대 -Xmx옵션으로 지정한 크기만큼 커진다. Sun HotSpt JVM 계열에서는 최초 크기와 최대 크기를 동일하게 부여할 것을 권장한다. 크기의 동적인 변경에 의한 오버 헤들를 최소화하기 위해서이다.
 
-* -Xmx<size> : Java Heap의 최eo 크기(Maximum Size)를 지정한다. -Xms 옵션으로 지정한 크기로 시작하며 최대 -Xmx옵션으로 지정한 크기만큼 커진다. Sun HotSpt JVM 계열에서는 최초 크기와 최대 크기를 동일하게 부여할 것을 권장한다. 크기의 동적인 변경에 의한 오버 헤들를 최소화하기 위해서이다.
+* -Xmx<size> : Java Heap의 최대 크기(Maximum Size)를 지정한다. -Xms 옵션으로 지정한 크기로 시작하며 최대 -Xmx옵션으로 지정한 크기만큼 커진다. Sun HotSpt JVM 계열에서는 최초 크기와 최대 크기를 동일하게 부여할 것을 권장한다. 크기의 동적인 변경에 의한 오버 헤들를 최소화하기 위해서이다.
 
 * -XX:NewSize=<Value> : Young Generation의 시작 크기를 지정한다. Young Generation의 크기는 NewSize옵션(시작크기)과 MaxNewSize옵션(최대크기)에 의해 결정된다
 
@@ -50,7 +50,7 @@ CATALINA_OPTS="$CATALINA_OPTS -server -d64 -Xms1G -XX:PermSize=128m -XX:MaxPermS
 
 * -XX:NewRatio=<value> : Young Generation과 Old Generation의 비율을 결정한다. 예를 들어 이 값이 2이면 Yong:Old = 1:2가 되고, Young Generation의 크기는 전체 Java  heap의 1/3이 된다.
 
-* -XX:SurvivorRatio=<value> : Survivor Space와 Eden Space의 비율ㅇ르 지정한다. 만일 이 값이 6이면, To Survivor Ratio:From Survivor Ratio:Eden Space = 1:1:6 이 된다 즉, 하나의 Survivor Space의 크기가 Young Generation의 1/8 이 된다. Survivor Space의 크기가 크면 Tenured Generation으로 옮겨가기 전의 중간 버퍼 영역이 커지는 셈이다. 따라서 Full GC의 빈도를 줄이는 역할을 할 수 있다. 반면 Eden Space의 크기가 줄어들므로 Mirror GC가 자주 발생하게 된다.
+* -XX:SurvivorRatio=<value> : Survivor Space와 Eden Space의 비율을 지정한다. 만일 이 값이 6이면, To Survivor Ratio:From Survivor Ratio:Eden Space = 1:1:6 이 된다 즉, 하나의 Survivor Space의 크기가 Young Generation의 1/8 이 된다. Survivor Space의 크기가 크면 Tenured Generation으로 옮겨가기 전의 중간 버퍼 영역이 커지는 셈이다. 따라서 Full GC의 빈도를 줄이는 역할을 할 수 있다. 반면 Eden Space의 크기가 줄어들므로 Mirror GC가 자주 발생하게 된다.
 
 * -XX:ReservedCodeCacheSize=<value> : Code Cache의 최대 사이즈의 크기(byte) 설정
 
