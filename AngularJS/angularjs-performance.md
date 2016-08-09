@@ -8,3 +8,5 @@
 > * ``ng-show``와 ``ng-hide`` 대신 ``ng-if``를 사용합니다.
 > * ``$apply`` 대신 ``$digest``를 대신 사용합니다.
 > * ``$httpProvider.useApplyAsync``를 사용합니다.
+
+(+) [How to watch service variables](./watch-service-variables.md)
