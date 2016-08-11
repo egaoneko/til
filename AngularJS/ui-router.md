@@ -488,6 +488,7 @@ filters의 조건에 list와 graph가 동일하게 영향을 받으면 list와 g
 ### 참조
 
 * [GitHub](https://github.com/angular-ui/ui-router)
+* [Wiki](https://github.com/angular-ui/ui-router/wiki)
 * [API](http://angular-ui.github.io/ui-router/site/#/api)
 * [AngularJS 실전: UI-Router 정복하기](http://slides.com/lsw/ui-router#/)
 * [ui-router framework 파헤치기](https://makeyourif.wordpress.com/2015/09/18/ionic-framework%EC%97%90%EC%84%9C%EC%9D%98-routing-%EC%B2%98%EB%A6%AC/)
