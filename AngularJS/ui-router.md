@@ -31,8 +31,8 @@ nested views를 가진 유연한 라우팅을 위한 AngularJS 사실 상의 솔
 
 #### 차이점
 
-|   | routes | states |
-| - | ------ | ------ |
+| T | routes | states |
+| -- | ------ | ------ |
 | Names | url을 설정 | names를 설정 |
 | Navigate | url 이용 | state, url 이용 |
 | View | 하나의 view | 여러개의 view |
