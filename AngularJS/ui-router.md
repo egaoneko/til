@@ -192,7 +192,7 @@ $stateProvider
 
 * 하나의 ``state``에 여러개의 view를 nesting 하거나 보다 명시적으로 적고 싶을 때 ``views``를 설정한다. (단, view의 이름은 중복될 수 없다.)
 
-#### Absolute Naming
+#### Relative & Absolute Naming
 
 ```javascript
 $stateProvider
@@ -213,8 +213,36 @@ $stateProvider
     })
 ```
 
+* Relative (always parent)
+	* ``'filter'`` : 'filter' view in parent template
+	* ``''`` : unnamed view in parent template
+* Absolute(uses ``@`` symbol)
+	* ``'filters@report'`` : 'filters' view in 'report' state's template
+	* ``'filters@'`` : 'filters' view in index.html
+	* ``'@report'`` : unnamed view in 'report' state's template
 * ``@``를 기준으로 앞쪽에는 정의하려는 뷰의 이름, 뒤쪽에는 상태이름을 명시함으로서 "현재 이 view가 어떤 state의 자식이다"라는 것을 알려준다. (위의 Nasted view에서는 ``.``을 통해 자식이라는 것을 표현하였지만 내부적으로 이름이 변환 될 때는 절대 이름으로 바뀐다.)
 * ``''``는 main Templete을 맵핑 시키기 위한 정의이다. 이렇게 정의하면 home state에 대한 main Templete는 ``patial-home.html``로서 맵핑 되고, 나머지 ``list``과 ``paragraph``는 자식으로서 각각의 템플릿이 맵핑된다.
+
+#### [UrlMatcher](http://angular-ui.github.io/ui-router/site/#/api/ui.router.util.type:UrlMatcher)
+
+Matches URLs against patterns and extracts named parameters from the path or the search part of the URL. A URL pattern consists of a path pattern, optionally followed by '?' and a list of search parameters.
+
+* ``:`` name - colon placeholder
+* ``*`` name - catch-all placeholder
+* ``{`` name ``}`` - curly placeholder
+* ``{`` name ``:`` regexp|type ``}`` - curly placeholder with regexp or type name. Should the regexp itself contain curly braces, they must be in matched pairs or escaped with a backslash.
+
+##### Example
+
+* ``/hello/`` - Matches only if the path is exactly ``/hello/``. There is no special treatment for trailing slashes, and patterns have to match the entire path, not just a prefix.
+* ``/user/:id`` - Matches ``/user/bob`` or ``/user/1234!!!`` or even ``/user/`` but not ``/user`` or ``/user/bob/details``. The second path segment will be captured as the parameter ``id``.
+* ``/user/{id}`` - Same as the previous example, but using curly brace syntax.
+* ``/user/{id:[^/]*}`` - Same as the previous example.
+* ``/user/{id:[0-9a-fA-F]{1,8}}`` - Similar to the previous example, but only matches if the id parameter consists of 1 to 8 hex digits.
+* ``/files/{path:.*}`` - Matches any URL starting with ``/files/`` and captures the rest of the path into the parameter ``path``.
+* ``/files/*path`` - ditto.
+* ``/calendar/{start:date}`` - Matches ``/calendar/2014-11-12`` (because the pattern defined in the built-in date Type matches 2014-11-12) and provides a Date object in $stateParams.start
+
 
 ### 주의점
 
@@ -292,6 +320,16 @@ function getAnimalDetail(itemId) {
   })
 }
 ```
+
+#### Relative Navigation
+
+
+![StateGoExamples.png](../img/AngularJS/ui-router/StateGoExamples.png)
+
+You can naviate relative to current state by using special character.
+
+* ``^`` : up
+* ``.`` : down
 
 ### 참조
 
