@@ -1,4 +1,4 @@
-# ngRouter & uiRouter
+# ngRoute & uiRouter
 
 ### Router framework
 
