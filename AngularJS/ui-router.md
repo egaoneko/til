@@ -57,7 +57,7 @@ $routeProvider
     })
 ```
 
-##### uiRoute
+##### uiRouter
 
 ```javascript
 $stateProvider
