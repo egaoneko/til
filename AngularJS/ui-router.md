@@ -124,7 +124,8 @@ $stateProvider
     })
 ```
 
-#### view nesting by state name
+#### [Nested States and Nested Views](https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views)
+##### view nesting by state name
 
 ```javascript
 $stateProvider
@@ -141,8 +142,12 @@ $stateProvider
         }
     })
 ```
+* [Registering States Order](https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views#registering-states-order) : You can register states in any order and across modules. You can register children before the parent state exists.
+* [Parent MUST Exist](https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views#parent-must-exist) : If you register only a single state, like ``home.list``, you MUST define a state called contacts at some point, or else no states will be registered.
+* [Naming Your States](https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views#naming-your-states) : No two states can have the same name.
+* [Nested States & Views](https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views#nested-states--views) : When the application is in a particular state—when a state is "active"—all of its ancestor states are implicitly active as well.
 
-#### view nesting by parent config
+##### view nesting by parent property
 
 ```javascript
 $stateProvider
@@ -159,6 +164,24 @@ $stateProvider
             $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
         }
     })
+```
+
+##### view nesting by object-based states
+
+```javascript
+var contacts = { 
+    name: 'contacts',  //mandatory
+    templateUrl: 'contacts.html'
+}
+var contactsList = { 
+    name: 'contacts.list', //mandatory. This counter-intuitive requirement addressed in issue #368
+    parent: contacts,  //mandatory
+    templateUrl: 'contacts.list.html'
+}
+
+$stateProvider
+  .state(contacts) //view nesting by object-based states
+  .state(contactsList)
 ```
 
 #### template
@@ -192,7 +215,7 @@ $stateProvider
 
 * 하나의 ``state``에 여러개의 view를 nesting 하거나 보다 명시적으로 적고 싶을 때 ``views``를 설정한다. (단, view의 이름은 중복될 수 없다.)
 
-#### Relative & Absolute Naming
+#### [Relative & Absolute Naming](https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views#view-names---relative-vs-absolute-names)
 
 ```javascript
 $stateProvider
@@ -213,6 +236,10 @@ $stateProvider
     })
 ```
 
+* ``@``를 기준으로 앞쪽에는 정의하려는 뷰의 이름, 뒤쪽에는 상태이름을 명시함으로서 "현재 이 view가 어떤 state의 자식이다"라는 것을 알려준다. (위의 Nasted view에서는 ``.``을 통해 자식이라는 것을 표현하였지만 내부적으로 이름이 변환 될 때는 절대 이름으로 바뀐다.)
+* ``''``는 main Templete을 맵핑 시키기 위한 정의이다. 이렇게 정의하면 home state에 대한 main Templete는 ``patial-home.html``로서 맵핑 되고, 나머지 ``list``과 ``paragraph``는 자식으로서 각각의 템플릿이 맵핑된다.
+
+
 * Relative (always parent)
 	* ``'filter'`` : 'filter' view in parent template
 	* ``''`` : unnamed view in parent template
@@ -220,8 +247,56 @@ $stateProvider
 	* ``'filters@report'`` : 'filters' view in 'report' state's template
 	* ``'filters@'`` : 'filters' view in index.html
 	* ``'@report'`` : unnamed view in 'report' state's template
-* ``@``를 기준으로 앞쪽에는 정의하려는 뷰의 이름, 뒤쪽에는 상태이름을 명시함으로서 "현재 이 view가 어떤 state의 자식이다"라는 것을 알려준다. (위의 Nasted view에서는 ``.``을 통해 자식이라는 것을 표현하였지만 내부적으로 이름이 변환 될 때는 절대 이름으로 바뀐다.)
-* ``''``는 main Templete을 맵핑 시키기 위한 정의이다. 이렇게 정의하면 home state에 대한 main Templete는 ``patial-home.html``로서 맵핑 되고, 나머지 ``list``과 ``paragraph``는 자식으로서 각각의 템플릿이 맵핑된다.
+
+``` javascript
+$stateProvider
+  .state('contacts', {
+    // This will get automatically plugged into the unnamed ui-view 
+    // of the parent state template. Since this is a top level state, 
+    // its parent state template is index.html.
+    templateUrl: 'contacts.html'   
+  })
+  .state('contacts.detail', {
+    views: {
+        ////////////////////////////////////
+        // Relative Targeting             //
+        // Targets parent state ui-view's //
+        ////////////////////////////////////
+
+        // Relatively targets the 'detail' view in this state's parent state, 'contacts'.
+        // <div ui-view='detail'/> within contacts.html
+        "detail" : { },            
+
+        // Relatively targets the unnamed view in this state's parent state, 'contacts'.
+        // <div ui-view/> within contacts.html
+        "" : { }, 
+
+        ///////////////////////////////////////////////////////
+        // Absolute Targeting using '@'                      //
+        // Targets any view within this state or an ancestor //
+        ///////////////////////////////////////////////////////
+
+        // Absolutely targets the 'info' view in this state, 'contacts.detail'.
+        // <div ui-view='info'/> within contacts.detail.html
+        "info@contacts.detail" : { }
+
+        // Absolutely targets the 'detail' view in the 'contacts' state.
+        // <div ui-view='detail'/> within contacts.html
+        "detail@contacts" : { }
+
+        // Absolutely targets the unnamed view in parent 'contacts' state.
+        // <div ui-view/> within contacts.html
+        "@contacts" : { }
+
+        // absolutely targets the 'status' view in root unnamed state.
+        // <div ui-view='status'/> within index.html
+        "status@" : { }
+
+        // absolutely targets the unnamed view in root unnamed state.
+        // <div ui-view/> within index.html
+        "@" : { } 
+  });
+```
 
 #### [UrlMatcher](http://angular-ui.github.io/ui-router/site/#/api/ui.router.util.type:UrlMatcher)
 
