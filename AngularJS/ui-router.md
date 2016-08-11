@@ -1,14 +1,28 @@
-# UI Router
+# ngRouter & uiRouter
 
-### ui-router
+### Router framework
 
-nested views를 가진 유연한 라우팅을 위한 AngularJS 사실 상의 솔루션
+Routing frameworks for SPAs **update the browser's URL as the user navigates** through the app. Conversely, this allows **changes to the browser's URL to drive navigation** through the app, thus allowing the **user to create a bookmark to a location** deep within the SPA.
 
-### ngRoute vs. UI Router
+### ngRoute
+
+routes는 ``$route`` service에서 제공하는 ``$routeProvider`` 를 통해서 정의된다. 이 서비스는 ``controller``와 ``view``에 해당되는 ``template`` 그리고 현재 ``url`` location 을 쉽게 엮어준다.
+
+![ngRoute.jpg](../img/AngularJS/ui-router/ngRoute.jpg)
+
+### uiRouter
+
+nested views를 가진 유연한 라우팅을 위한 AngularJS 사실 상의 솔루션이다.
+
+* Nested States는 하나의 상태에서 하위로 state값을 확장해나가는 것을 의미
+
+![uiRouter.jpg](../img/AngularJS/ui-router/uiRouter.jpg)
+
+### ngRoute vs. uiRouter
 
 #### 공통점
 
-* ``url`` 설정(ui-router에서는 optional)
+* ``url`` 설정(uiRouter에서는 optional)
 * ``template`` or ``tempalteUrl`` 설정
 * view에 필요시 ``controller`` 할당
 * ``when()``일때 redirect
@@ -17,16 +31,33 @@ nested views를 가진 유연한 라우팅을 위한 AngularJS 사실 상의 솔
 
 #### 차이점
 
-| routes | states |
-| ------ | ------ |
-| url을 설정 | state를 설정 |
-| url 이용 | state, url 이용 |
-| 하나의 view | 여러개의 view |
-| flat hierarchy | nested hierarchy |
+|   | routes | states |
+| - | ------ | ------ |
+| Names | url을 설정 | names를 설정 |
+| Navigate | url 이용 | state, url 이용 |
+| View | 하나의 view | 여러개의 view |
+| Hierarchy | flat hierarchy | nested hierarchy |
 
-* Nested States는 하나의 상태에서 하위로 state값을 확장해나가는 것을 의미
+##### ngRoute
 
-##### UI Route
+```javascript
+$routeProvider
+    .when('/home', {
+        templateUrl: 'partial-home.html'
+    })
+    .when('/home/list', {
+        templateUrl: 'partial-home-list.html',
+        controller: function($scope) {
+            $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+        }
+    })
+    .when('/home/paragraph',{
+        url: '/paragraph',
+        template: 'I could sure use a drink right now.'
+    })
+```
+
+##### uiRoute
 
 ```javascript
 $stateProvider
@@ -46,25 +77,6 @@ $stateProvider
 
     // nested list with just some random string data
     .state('home.paragraph', {
-        url: '/paragraph',
-        template: 'I could sure use a drink right now.'
-    })
-```
-
-##### ngRoute
-
-```javascript
-$routeProvider
-    .when('/home', {
-        templateUrl: 'partial-home.html'
-    })
-    .when('/home/list', {
-        templateUrl: 'partial-home-list.html',
-        controller: function($scope) {
-            $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
-        }
-    })
-    .when('/home/paragraph',{
         url: '/paragraph',
         template: 'I could sure use a drink right now.'
     })
@@ -112,6 +124,8 @@ $stateProvider
     })
 ```
 
+#### view nesting by state name
+
 ```javascript
 $stateProvider
     .state('home', {
@@ -127,6 +141,8 @@ $stateProvider
         }
     })
 ```
+
+#### view nesting by parent config
 
 ```javascript
 $stateProvider
@@ -145,6 +161,8 @@ $stateProvider
     })
 ```
 
+#### template
+
 ```xml
 <!-- index.html -->
 <body ng-app>
@@ -154,6 +172,8 @@ $stateProvider
 ```
 
 * 각 ``template``/``templateUrl``은 parent state의 template 속 ``ui-view`` directive에 삽입된다.
+
+#### views
 
 ```javascript
 $stateProvider
@@ -171,6 +191,8 @@ $stateProvider
 ```
 
 * 하나의 ``state``에 여러개의 view를 nesting 하거나 보다 명시적으로 적고 싶을 때 ``views``를 설정한다. (단, view의 이름은 중복될 수 없다.)
+
+#### Absolute Naming
 
 ```javascript
 $stateProvider
@@ -192,13 +214,11 @@ $stateProvider
 ```
 
 * ``@``를 기준으로 앞쪽에는 정의하려는 뷰의 이름, 뒤쪽에는 상태이름을 명시함으로서 "현재 이 view가 어떤 state의 자식이다"라는 것을 알려준다. (위의 Nasted view에서는 ``.``을 통해 자식이라는 것을 표현하였지만 내부적으로 이름이 변환 될 때는 절대 이름으로 바뀐다.)
-* ``''``는 main Templete을 맵핑 시키기 위한 정의이다. 이렇게 정의하면 home state에 대한 main Templete는 patial-home.html로서 맵핑 되고, 나머지 list과 paragraph는 자식으로서 각각의 템플릿이 맵핑된다.
-
-
+* ``''``는 main Templete을 맵핑 시키기 위한 정의이다. 이렇게 정의하면 home state에 대한 main Templete는 ``patial-home.html``로서 맵핑 되고, 나머지 ``list``과 ``paragraph``는 자식으로서 각각의 템플릿이 맵핑된다.
 
 ### 주의점
 
-route 구조를 잡을 때, 정말 하나의 state template에 multiple named views가 필요한지 먼저 생각해 볼 필요가 있다. 대부분의 경우 view를 하나씩 nesting 해도 해결되기 때문이다. '각 view들이 별도의 scope으로 분리가 필요한가', '각 view들이 서로 어떻게 의존적인가' 를 고려하여 판단한다.
+route 구조를 잡을 때, 정말 하나의 state template에 multiple named views가 필요한지 먼저 생각해 볼 필요가 있다. 대부분의 경우 view를 하나씩 nesting 해도 해결되기 때문이다. "각 view들이 별도의 scope으로 분리가 필요한가", '" view들이 서로 어떻게 의존적인가" 를 고려하여 판단한다.
 
 ![ui-router1.png](../img/AngularJS/ui-router/ui-router1.png)
 
