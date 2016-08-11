@@ -298,7 +298,25 @@ $stateProvider
   });
 ```
 
-#### [UrlMatcher](http://angular-ui.github.io/ui-router/site/#/api/ui.router.util.type:UrlMatcher)
+### [URL Routing](https://github.com/angular-ui/ui-router/wiki/URL-Routing)
+
+#### [URL Parameters](https://github.com/angular-ui/ui-router/wiki/URL-Routing#url-parameters)
+
+URLs have dynamic parts to them which are called parameters.
+
+```javascript
+$stateProvider
+    .state('contacts.detail', {
+        url: "/contacts/:contactId",
+        templateUrl: 'contacts.detail.html',
+        controller: function ($stateParams) {
+            // If we got here from a url of /contacts/42
+            expect($stateParams).toBe({contactId: "42"});
+        }
+    })
+```
+
+##### [UrlMatcher](http://angular-ui.github.io/ui-router/site/#/api/ui.router.util.type:UrlMatcher)
 
 Matches URLs against patterns and extracts named parameters from the path or the search part of the URL. A URL pattern consists of a path pattern, optionally followed by '?' and a list of search parameters.
 
@@ -307,7 +325,7 @@ Matches URLs against patterns and extracts named parameters from the path or the
 * ``{`` name ``}`` - curly placeholder
 * ``{`` name ``:`` regexp|type ``}`` - curly placeholder with regexp or type name. Should the regexp itself contain curly braces, they must be in matched pairs or escaped with a backslash.
 
-##### Example
+###### Example
 
 * ``/hello/`` - Matches only if the path is exactly ``/hello/``. There is no special treatment for trailing slashes, and patterns have to match the entire path, not just a prefix.
 * ``/user/:id`` - Matches ``/user/bob`` or ``/user/1234!!!`` or even ``/user/`` but not ``/user`` or ``/user/bob/details``. The second path segment will be captured as the parameter ``id``.
@@ -318,27 +336,78 @@ Matches URLs against patterns and extracts named parameters from the path or the
 * ``/files/*path`` - ditto.
 * ``/calendar/{start:date}`` - Matches ``/calendar/2014-11-12`` (because the pattern defined in the built-in date Type matches 2014-11-12) and provides a Date object in $stateParams.start
 
+##### [Using Parameters without Specifying Them in State URLs](https://github.com/angular-ui/ui-router/wiki/URL-Routing#using-parameters-without-specifying-them-in-state-urls)
 
-### 주의점
+``params``에 정의하면 ``url``에는 보이지 않지만, 해당 ``scope``에 ``param``이 전달됩니다.
 
-route 구조를 잡을 때, 정말 하나의 state template에 multiple named views가 필요한지 먼저 생각해 볼 필요가 있다. 대부분의 경우 view를 하나씩 nesting 해도 해결되기 때문이다. "각 view들이 별도의 scope으로 분리가 필요한가", '" view들이 서로 어떻게 의존적인가" 를 고려하여 판단한다.
+```javascript
+.state('main.surveyList.surveyDetail', {
+    url: '/surveyDetail/:selectedDate',
+    templateUrl: 'survey-detail.html'
+  })
+```
 
-![ui-router1.png](../img/AngularJS/ui-router/ui-router1.png)
+```
+/surveyDetail/Sat Nov 28 2015 00:00:00 GMT+0900 (KST)
+```
 
-![ui-router2.png](../img/AngularJS/ui-router/ui-router2.png)
+```javascript
+.state('main.surveyList.surveyDetail', {
+    params: {
+      selectedDate: null
+    },
+    url: '/surveyDetail',
+    templateUrl: 'survey-detail.html'
+  })
+```
 
-filters의 조건에 list와 graph가 동일하게 영향을 받으면 list와 graph는 filters에 의존적/종속적이고, list와 graph는 filters를 parent로 가질 수 있다. 만일 list와 graph가 seperated scope이 필요하다면, 두개의 별도의 named view가 될 필요가 있고, 아니라면 하나의 view로 표현할 수 있다.
+#### [URL Routing for Nested States](https://github.com/angular-ui/ui-router/wiki/URL-Routing#url-routing-for-nested-states)
 
-### How to active state
+##### Appended Routes (default)
 
-#### state의 life-cycle과 event
+```javascript
+$stateProvider
+  .state('contacts', {
+     url: '/contacts',
+     ...
+  })
+  .state('contacts.list', {
+     url: '/list',
+     ...
+  });
+```
+
+* **'contacts'** state matches ``"/contacts"``
+* **'contacts.list'** state matches ``"/contacts/list"``. The urls were combined.
+
+##### Absolute Routes (^)
+
+```javascript
+$stateProvider
+  .state('contacts', {
+     url: '/contacts',
+     ...
+  })
+  .state('contacts.list', {
+     url: '^/list',
+     ...
+  });
+```
+
+* **'contacts'** state matches ``"/contacts"``
+* **'contacts.list'** state matches ``"/list"``. The urls were **not** combined because ``^`` was used.
+
+
+#### How to active state
+
+##### state의 life-cycle과 event
 
 ![ui-router3.png](../img/AngularJS/ui-router/ui-router3.png)
 
-#### state를 activate시키는 방법
+##### state를 activate시키는 방법
 
-##### state가 가진 url로 직접 이동
-##### ui-sref directive 안의 link를 클릭
+###### state가 가진 url로 직접 이동
+###### ui-sref directive 안의 link를 클릭
 
 Before compiled:
 ```xml
@@ -370,7 +439,7 @@ After compiled:
 <a ui-sref="home" ui-sref-opts="{reload: true}">Home</a>
 ```
 
-##### $state.go()
+###### $state.go()
 
 $state.go() 를 사용해
 여러가지 필요한 연산 후에 이동 가능
@@ -405,6 +474,16 @@ You can naviate relative to current state by using special character.
 
 * ``^`` : up
 * ``.`` : down
+
+### 주의점
+
+route 구조를 잡을 때, 정말 하나의 state template에 multiple named views가 필요한지 먼저 생각해 볼 필요가 있다. 대부분의 경우 view를 하나씩 nesting 해도 해결되기 때문이다. "각 view들이 별도의 scope으로 분리가 필요한가", '" view들이 서로 어떻게 의존적인가" 를 고려하여 판단한다.
+
+![ui-router1.png](../img/AngularJS/ui-router/ui-router1.png)
+
+![ui-router2.png](../img/AngularJS/ui-router/ui-router2.png)
+
+filters의 조건에 list와 graph가 동일하게 영향을 받으면 list와 graph는 filters에 의존적/종속적이고, list와 graph는 filters를 parent로 가질 수 있다. 만일 list와 graph가 seperated scope이 필요하다면, 두개의 별도의 named view가 될 필요가 있고, 아니라면 하나의 view로 표현할 수 있다.
 
 ### 참조
 
