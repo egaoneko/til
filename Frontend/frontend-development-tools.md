@@ -270,3 +270,4 @@ gulp.task('default', ['styles, watch']);
 * [Gulp vs Grunt. Why one? Why the Other?](https://medium.com/@preslavrachev/gulp-vs-grunt-why-one-why-the-other-f5d3b398edc4#.gdbdf1crb)
 * [Gulp 입문 1 - Gulp에 대한 소개](http://programmingsummaries.tistory.com/356)
 * [Gulp 입문 2 - 한단계씩 따라하며 gupl.js 익히기](http://programmingsummaries.tistory.com/377)
+* [실전 프로젝트로 배우는 AngularJS](http://book.naver.com/bookdb/book_detail.nhn?bid=9153885)
