@@ -120,6 +120,8 @@ function drawImg(type, img, r, c, s) {
 | 10 | 0.5 | 0.5 | 0.5 | 62.9 |
 | 20 | 0.1 | 0.1 | 0.1 | 64 |
 
+* [Plunker](https://plnkr.co/edit/KDhwFwM4RYgYLo1HxyAQ?p=preview)
+
 ### Reference
 
 * [캔버스 변환: setTransform](http://rayuela.kr/htmlcss/post1082/)
