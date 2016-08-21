@@ -153,6 +153,8 @@
 </html>
 ```
 
+* [Plunker](https://embed.plnkr.co/QSa8fBwvdQD7Y8cPUTE8/)
+
 ### Reference
 
 * [Understanding Components](https://docs.angularjs.org/guide/component)
