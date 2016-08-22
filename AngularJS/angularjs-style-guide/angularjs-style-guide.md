@@ -12,6 +12,7 @@
 * [IIFE](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#iife)
 * [Application Structure LIFT Principle](https://github.com/johnpapa/angular-styleguide/blob/master/a1%2Fi18n%2Fko-KR.md#lift)
 * [File Templates and Snippets](https://github.com/johnpapa/angular-styleguide/blob/master/a1%2Fi18n%2Fko-KR.md#file-templates-and-snippets)
+* [Yeoman Generator](https://github.com/johnpapa/angular-styleguide/blob/master/a1/i18n/ko-KR.md#yeoman-generator)
 
 ### [Minko Gechev's AngularJS Style Guide](https://github.com/mgechev/angularjs-style-guide)
 
