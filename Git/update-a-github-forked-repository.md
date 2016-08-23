@@ -28,3 +28,7 @@ git rebase upstream/master
 
 git push -f origin master
 ```
+
+### Reference
+
+* [stack overflow](http://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository)
