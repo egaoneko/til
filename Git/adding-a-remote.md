@@ -9,3 +9,7 @@ git remote -v
 origin  https://github.com/user/repo.git (fetch)
 origin  https://github.com/user/repo.git (push)
 ```
+
+### Reference
+
+*[Adding a remote](https://help.github.com/articles/adding-a-remote/)
