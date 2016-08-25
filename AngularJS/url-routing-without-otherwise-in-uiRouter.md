@@ -88,6 +88,6 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 
 하지만 ``state1``과 ``state2``는 정상적으로 작동한다.
 
-### Reference
-
 * [Plunker Example](https://embed.plnkr.co/MNwzQbK5q1gJ2FxPxWWm/)
+
+<iframe style="width: 100%; height: 600px" src="https://embed.plnkr.co/MNwzQbK5q1gJ2FxPxWWm" frameborder="0" allowfullscren="allowfullscren"></iframe>
