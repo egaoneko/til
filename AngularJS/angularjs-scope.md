@@ -155,6 +155,9 @@
 
 * [Plunker](https://embed.plnkr.co/QSa8fBwvdQD7Y8cPUTE8/)
 
+<iframe style="width: 100%; height: 600px" src="https://embed.plnkr.co/QSa8fBwvdQD7Y8cPUTE8" frameborder="0" allowfullscren="allowfullscren"></iframe>
+
+
 ### Reference
 
 * [Understanding Components](https://docs.angularjs.org/guide/component)

@@ -122,6 +122,8 @@ function drawImg(type, img, r, c, s) {
 
 * [Plunker](https://embed.plnkr.co/KDhwFwM4RYgYLo1HxyAQ/)
 
+<iframe style="width: 100%; height: 600px" src="https://embed.plnkr.co/KDhwFwM4RYgYLo1HxyAQ" frameborder="0" allowfullscren="allowfullscren"></iframe>
+
 ### Reference
 
 * [캔버스 변환: setTransform](http://rayuela.kr/htmlcss/post1082/)
