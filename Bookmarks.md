@@ -4,6 +4,7 @@
 
 ### Guide
 * [누구나 쉽게 이해할 수 있는 Git입문](http://backlogtool.com/git-guide/kr/) : Git 사용법 설명
+* [Git, 가장 쉽게 사용하기](http://tmondev.blog.me/220759303637) : Git 사용법 설명
 
 ## CSS
 
