@@ -34,6 +34,53 @@ Provided by most DOM browsers, including Internet Explorer.
 | Tkhtml Hv3 | window | window | document |
 | Netscape 4 | window | N/A | N/A |
 
+### outerHeight vs innerHeight
+
+![FirefoxInnerVsOuterHeight2.png](../img/JavaScript/window-size/FirefoxInnerVsOuterHeight2.png)
+
+* [Window.innerHeight](https://developer.mozilla.org/ko/docs/Web/API/Window/innerHeight)
+
+### document height
+
+#### Pure JavaScript
+
+```javascript
+function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    );
+}
+```
+
+#### jQuery
+
+```javascript
+$.getDocHeight = function(){
+     var D = document;
+     return Math.max(Math.max(D.body.scrollHeight,    D.documentElement.scrollHeight), Math.max(D.body.offsetHeight, D.documentElement.offsetHeight), Math.max(D.body.clientHeight, D.documentElement.clientHeight));
+};
+```
+
+```javascript
+$.getDocHeight = function(){
+    return Math.max(
+        $(document).height(),
+        $(window).height(),
+        /* For opera: */
+        document.documentElement.clientHeight
+    );
+};
+```
+
+* [Get document height (cross-browser)](http://james.padolsey.com/javascript/get-document-height-cross-browser/)
+
+### box-sizing
+
+* [box-sizing](../CSS/height-and-width.md#box-sizing)
+
 ### Reference
 
 * [Window size and scrolling](http://www.howtocreate.co.uk/tutorials/javascript/browserwindow)
