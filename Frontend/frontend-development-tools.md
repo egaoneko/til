@@ -259,6 +259,26 @@ gulp.task('watch', function() {
 gulp.task('default', ['styles, watch']);
 ```
 
+### [NPM(Node Packaged Modules)](https://www.npmjs.com/)
+
+#### npm-install(Install a package)
+
+```bash
+npm install (with no args, in package dir)
+npm install [<@scope>/]<name>
+npm install [<@scope>/]<name>@<tag>
+npm install [<@scope>/]<name>@<version>
+npm install [<@scope>/]<name>@<version range>
+npm install <tarball file>
+npm install <tarball url>
+npm install <folder>
+
+alias: npm i
+common options: [-S|--save|-D|--save-dev|-O|--save-optional] [-E|--save-exact] [--dry-run]
+```
+
+* [npm-install(Install a package)](https://docs.npmjs.com/cli/install)
+
 ### 참고
 
 * [Grunt 소개 및 사용법](http://nuli.navercorp.com/sharing/blog/post/1132682)
