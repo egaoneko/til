@@ -10,11 +10,12 @@
 * [Understanding Components](https://docs.angularjs.org/guide/component)
 * [Understanding Dependency Injection](https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection)
 * [Animations](https://docs.angularjs.org/guide/animations)
+* [Writing AngularJS Documentation](https://github.com/angular/angular.js/wiki/Writing-AngularJS-Documentation)
+* [Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines)
 
 ### Libraries
 * [Jasmine](http://jasmine.github.io/2.4/introduction.html)
 * [Protrarctor](https://github.com/angular/protractor)
- 
 
 ### References
 * [Angular 1.5의 새 기능, .component() 알아보기](http://haruair.com/blog/3209)
