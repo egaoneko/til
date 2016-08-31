@@ -14,6 +14,42 @@
 <node-list ng-model="node.Options" delete-article="deleteArticle({node_item: node_item})" edit-article="editArticle({node_item: node_item})"></node-list>
 ```
 
+#### Addition
+
+```javascript
+function routerConfig($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: 'app/main/main.html',
+      controller: 'MainController',
+      controllerAs: 'main'
+    });
+
+  $urlRouterProvider.otherwise('/');
+}
+
+function MainController () {
+  var vm = this;
+
+  vm.select = function (data, event) {
+    console.log(data);
+  };
+}
+```
+
+위와 같이 작성을 하고 아래와 같은 실수를 하지 말자.
+
+```xml
+  <tree select="vm.select(data, event)" nodes="main.nodes"></tree>
+```
+
+`controllerAs: 'main'`를 설정한 것을 잊지 말자.
+
+```xml
+  <tree select="main.select(data, event)" nodes="main.nodes"></tree>
+```
+
 #### Example
 
 ```javascript
