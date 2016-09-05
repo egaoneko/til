@@ -27,3 +27,7 @@
     </table>
 </body>
 ```
+
+### Reference
+
+* [stack overflow](http://stackoverflow.com/questions/5932018/fluid-table-with-td-nowrap-text-overflow)
