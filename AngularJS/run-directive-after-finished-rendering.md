@@ -82,6 +82,21 @@ $timeout(function(){
 });
 ```
 
+### Addtion
+
+```javascript
+$timeout(function(){
+    var offsetXY = offset(element);
+    scope.x = offsetXY.left;
+    scope.y = offsetXY.top;
+}, 10);
+```
+
+`$timeout(func)`을 사용하여도 새로고침을 다수 수행하였을 때, 작동을 안하는 경우가 종종 발견되었다. 이를 해결하기 위해 `$timeout(func, num)`에 연기할 시간을 주면 정상적으로 작동하였다.
+
+### Reference
+
+* [$timeout](https://docs.angularjs.org/api/ng/service/$timeout)
 * [stack overflow](http://stackoverflow.com/questions/12240639/how-can-i-run-a-directive-after-the-dom-has-finished-rendering)
 * [Run a directive after the DOM has finished rendering](http://blog.brunoscopelliti.com/run-a-directive-after-the-dom-has-finished-rendering/)
 * [[AngularJS] 쉽지만 쉽지않은 $timeout 서비스](http://programmingsummaries.tistory.com/348)
