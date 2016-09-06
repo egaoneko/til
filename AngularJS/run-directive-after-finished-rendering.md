@@ -38,7 +38,7 @@ app.directive('sdiv', function ($timeout) {
 
 ### Solution
 
-![sdiv2](../img/AngularJS/run-directive-after-finished-rendering/sdiv2.png)
+![sdiv2](../img/AngularJS/run-directive-after-finished-rendering/sdiv2.PNG)
 
 ```javascript
 app.directive('sdiv', function ($timeout) {

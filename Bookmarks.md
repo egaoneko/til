@@ -14,3 +14,4 @@
 ### Generator
 * [Layzilla](http://www.layzilla.com/) : CSS Layout 생성 (Full Screen)
 * [CSS Layout Generator](http://csslayoutgenerator.com/) : CSS Layout 생성
+* [PlaceHold](http://placehold.it/) : 빈 이미지 생성 (http://placehold.it/{width}x{height})
