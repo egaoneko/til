@@ -18,8 +18,15 @@
 
 ## JavaScript
 
+### Pure
+
+#### Guide
+
+* [코어 자바스크립트 - JUI](http://blog.jui.io/?cat=5) : JS 전반적인 설명
+* [Function Declarations(함수선언) vs Function Expressions(함수표현)](http://insanehong.kr/post/javascript-function/) : JS Function 설명
+
 ### Node.js
 
 #### Guide
 
-* [Node.js: 비동기 프로그래밍 이해](http://www.nextree.co.kr/p7292/)
+* [Node.js: 비동기 프로그래밍 이해](http://www.nextree.co.kr/p7292/) : 비동기 프로그래밍에 대한 설명
