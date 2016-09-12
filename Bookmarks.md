@@ -30,3 +30,13 @@
 #### Guide
 
 * [Node.js: 비동기 프로그래밍 이해](http://www.nextree.co.kr/p7292/) : 비동기 프로그래밍에 대한 설명
+
+## Tools
+
+### API
+
+* [Swagger editor](http://editor.swagger.io/#/) : Swagger editor
+
+### Etc
+
+* [Lodash의 지연 평가 소개 by Filip Zawada](http://haruair.com/blog/2983)
