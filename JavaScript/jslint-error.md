@@ -1,6 +1,6 @@
 # JSLint Error
 
-### Move the invocation into the parens that contain the function.
+### Move the invocation into the parens that contain the function. (IIFE)
 
 This error is raised to highlight a **potentially confusing piece of code**.
 
@@ -49,3 +49,13 @@ var x = (function () {
 ```
 
 * [Wrapping non-IIFE function literals in parens is unnecessary](http://jslint.fantasy.codes/wrapping-non-iife-function-literals-in-parens/)
+
+```javascript
+(function () { … })();
+(function () { … }());  // Douglas Crockford's style
+```
+
+* [Immediately-invoked function expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+* [즉시실행함수 패턴 (IIFE Patterns)](http://ohgyun.com/474)
+* [Immediately-Invoked Function Expression (IIFE)](http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)
+* [stack overflow](http://stackoverflow.com/questions/33651198/what-are-the-different-ways-of-writing-an-iife-what-are-their-use-cases)
