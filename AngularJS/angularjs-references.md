@@ -25,3 +25,4 @@
 * [ng-reoeat에 있는 track by에 대한 설명](http://dev.team-slogup.net/angular-js-%EC%95%B5%EA%B7%A4%EB%9F%ACjs-ng-repeat%EC%97%90-%EC%9E%88%EB%8A%94-track-by%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%A4%EB%AA%85/)
 * [AngularJS: 사용자정의 디렉티브(directive) 이야기](http://www.nextree.co.kr/p4850/)
 * [Angular.js의 ngClass 사용방법](https://blog.outsider.ne.kr/1045)
+* [[AngularJS] Service 종류 이해하기](http://mobicon.tistory.com/329)
