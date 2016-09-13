@@ -35,7 +35,14 @@
 
 ### API
 
+* [Swagger로 REST API 문서 자동화 하기](http://jojoldu.tistory.com/31) : Swagger 설명
 * [Swagger editor](http://editor.swagger.io/#/) : Swagger editor
+
+## Skill
+
+### Frontend
+
+* [(번역) 훌륭한 프론트엔드 개발자가 되는 법 by Google Engineer](https://joshuajangblog.wordpress.com/2016/07/27/how_to_become_good_front_end_engineer/)
 
 ### Etc
 
