@@ -52,5 +52,6 @@ juBtnRadio.$inject = ['$parse'];
 
 ### Reference
 
+* [ngModel.NgModelController](https://docs.angularjs.org/api/ng/type/ngModel.NgModelController)
 * [폼과 유효성 검사를 위한 템플릿(폼/입력 지시자)](http://kshmc.tistory.com/entry/8-%ED%8F%BC%EA%B3%BC-%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%85%9C%ED%94%8C%EB%A6%BF%ED%8F%BC%EC%9E%85%EB%A0%A5-%EC%A7%80%EC%8B%9C%EC%9E%90)
 * [Angular Form](http://yubylab.tistory.com/entry/8Angular-Form)
