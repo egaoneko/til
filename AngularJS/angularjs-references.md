@@ -12,10 +12,12 @@
 * [Animations](https://docs.angularjs.org/guide/animations)
 * [Writing AngularJS Documentation](https://github.com/angular/angular.js/wiki/Writing-AngularJS-Documentation)
 * [Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines)
+* [angular.element](https://docs.angularjs.org/api/ng/function/angular.element)
 
 ### Libraries
 * [Jasmine](http://jasmine.github.io/2.4/introduction.html)
 * [Protrarctor](https://github.com/angular/protractor)
+* [$compile](https://docs.angularjs.org/api/ng/service/$compile)
 
 ### References
 * [Angular 1.5의 새 기능, .component() 알아보기](http://haruair.com/blog/3209)
