@@ -17,3 +17,7 @@
 | [Fuzzy Finder](https://github.com/atom/fuzzy-finder) | 파일 탐색기 | `cmd`-`t` or `ctrl`-`t` | O |
 | [Sort Lines](https://atom.io/packages/sort-lines) | 선택한 내용 정렬 | Finder로 검색해 사용 | X |
 | [WakaTime](https://atom.io/packages/wakatime) | 프로젝트 정보 가시화 |  | ? |
+
+### Referece
+
+* [Atom 필수 플러그인 리스트 (Can’t live without it)](https://joshuajangblog.wordpress.com/2016/09/01/atom-plugins-cant-live-without-it/)
