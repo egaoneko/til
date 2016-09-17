@@ -59,3 +59,4 @@
 ### Etc
 
 * [Lodash의 지연 평가 소개 by Filip Zawada](http://haruair.com/blog/2983)
+* [MS는 ReactiveX를 왜 만들었을까? (feat. RxJS)](http://huns.me/development/2051)
