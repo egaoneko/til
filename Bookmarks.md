@@ -25,6 +25,7 @@
 
 * [코어 자바스크립트 - JUI](http://blog.jui.io/?cat=5) : JS 전반적인 설명
 * [Function Declarations(함수선언) vs Function Expressions(함수표현)](http://insanehong.kr/post/javascript-function/) : JS Function 설명
+* [javascript ajax 크로스 도메인 요청 하기 (CORS)](http://adrenal.tistory.com/16) : CORS 설명 및 해결책
 
 #### Performance
 
@@ -61,6 +62,7 @@
 
 * [Lodash의 지연 평가 소개 by Filip Zawada](http://haruair.com/blog/2983)
 * [MS는 ReactiveX를 왜 만들었을까? (feat. RxJS)](http://huns.me/development/2051)
+<<<<<<< HEAD
 
 ## DB
 
@@ -72,3 +74,6 @@
 * [PostgreSQL, PAS](http://zetawiki.com/wiki/PostgreSQL,_PPAS) : 위키
 * [jsonb 자료형 다루기](http://postgresql.kr/blog/postgresql_jsonb.html) : 자료형
 * [postgresql 9.4.2 & pgAdmin III 설치하기](http://freeprog.tistory.com/95) : 설치
+=======
+* [http://exercism.io/](http://exercism.io/) : 언어별 다양한 문제 제공
+>>>>>>> b8cf83a0c4aada521988476d18d38885d9da069a

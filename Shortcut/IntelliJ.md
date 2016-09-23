@@ -169,7 +169,7 @@
 | thr | throw new |
 
 
-###General
+### General
 
 | Shortcut | Task |
 | -------- | ---- |
@@ -184,3 +184,9 @@
 | Ctrl + Alt + Shift + S | Open Project Structure dialog |
 | Ctrl + Shift + A | Find Action |
 | Ctrl + Tab | Switch between tabs and tool window |
+
+### ETC
+| Windows | Mac | Task |
+| -------- | -------- | ---- |
+| Shift + Alt + Insert | Cmd + Shift + 8 | Column Selection Mode |
+| Shift + Alt + N | Shift + Alt + N | [Managing Tasks and Context](https://www.jetbrains.com/help/idea/2016.2/managing-tasks-and-context.html) |
