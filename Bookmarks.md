@@ -51,6 +51,7 @@
 * [(번역) 훌륭한 프론트엔드 개발자가 되는 법 by Google Engineer](https://joshuajangblog.wordpress.com/2016/07/27/how_to_become_good_front_end_engineer/)
 * [프론트엔드 개발자를 위한 크롬 렌더링 성능 인자 이해하기 - Chang W. Doh](http://www.slideshare.net/cwdoh/gdg-webtech-1)
 * [Service Worker 101 - Chang W. Doh](http://www.slideshare.net/cwdoh/service-worker-101)
+* [HTTP 접근 제어 (CORS)](https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS)
 
 ### Server
 
