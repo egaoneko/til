@@ -61,3 +61,14 @@
 
 * [Lodash의 지연 평가 소개 by Filip Zawada](http://haruair.com/blog/2983)
 * [MS는 ReactiveX를 왜 만들었을까? (feat. RxJS)](http://huns.me/development/2051)
+
+## DB
+
+### PostgreSQL
+
+#### Guide
+
+* [PostgreSQL 9.4.0 문서](http://postgresql.kr/docs/9.4/) : 공식문서 (한글)
+* [PostgreSQL, PAS](http://zetawiki.com/wiki/PostgreSQL,_PPAS) : 위키
+* [jsonb 자료형 다루기](http://postgresql.kr/blog/postgresql_jsonb.html) : 자료형
+* [postgresql 9.4.2 & pgAdmin III 설치하기](http://freeprog.tistory.com/95) : 설치
