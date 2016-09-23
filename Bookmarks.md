@@ -57,6 +57,7 @@
 * [더 빠른 웹을 위해: HTTP/2 - EungJun Yi](http://www.slideshare.net/eungjun/http2-40582114)
 * [서버 성능에 대한 정의와 이해 - Sunny Kwak](http://www.slideshare.net/sunnykwak90/ss-44875669)
 * [안정적인 서비스 운영 - Changyol BAEK](http://www.slideshare.net/cybaek/201403)
+* [[Spring Cloud] 클라이언트 사이드 로드 밸런싱 (Client side Loadbalancing) 이란 ??](http://blog.leekyoungil.com/?p=259)
 
 ### Etc
 
@@ -64,6 +65,7 @@
 * [MS는 ReactiveX를 왜 만들었을까? (feat. RxJS)](http://huns.me/development/2051)
 * [http://exercism.io/](http://exercism.io/) : 언어별 다양한 문제 제공
 * [Currying 어따 써먹냐구요?](https://www.facebook.com/notes/kevin-lee/currying-%EC%96%B4%EB%94%B0-%EC%8D%A8%EB%A8%B9%EB%83%90%EA%B5%AC%EC%9A%94/214522735556858?hc_location=ufi)
+* [람다, 익명 함수, 클로저](https://hyunseob.github.io/2016/09/17/lambda-anonymous-function-closure/)
 
 ## DB
 
