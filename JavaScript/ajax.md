@@ -201,6 +201,106 @@ action2: {method:?, params:?, isArray:?, headers:?, ...},
   'delete': {method:'DELETE'} };
 ```
 
+### Addition
+
+jQuery에서 ajax를 편하게 사용하기 위해 AngularJS의 `$resource`를 참고하여 구현.
+
+```javascript
+var ajaxManager = (function() {
+
+    var INSTANCE;
+
+    function Singleton(config) {
+        if (config) {
+            this.init(config);
+        }
+
+        this.methods = {
+            get: new this.ajax('GET'),
+            post: new this.ajax('POST'),
+            put: new this.ajax('PUT'),
+            patch: new this.ajax('PATCH'),
+            delete: new this.ajax('DELETE')
+        };
+    }
+
+    Singleton.prototype.init = function(config) {
+        $.ajaxSetup(config);
+    };
+
+    Singleton.prototype.ajax = function(method) {
+        return function(url, parameter, data) {
+            var resource = {};
+            var dfd = $.Deferred();
+            resource.$promise = dfd;
+            resource.$resolved = false;
+            resource.$status = undefined;
+
+            $.ajax({
+                url: setUrl(url, parameter),
+                type: method,
+                data: JSON.stringify(data),
+                contentType: "application/json;charset=UTF-8",
+                dataType: 'json',
+                success: function(data, textStatus, jqXHR) {
+                    resource.$resolved = true;
+                    resource.$status = textStatus;
+                    $.extend(resource, data);
+                    dfd.resolve(resource, textStatus, jqXHR);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    resource.$status = textStatus;
+                    dfd.reject(jqXHR, textStatus, errorThrown);
+                }
+            });
+
+            return resource;
+        };
+
+        function setUrl(url, parameter) {
+            var query = [];
+            if (parameter) {
+                $.each(parameter, function(key, val) {
+                    var param = ':' + key;
+                    if (!includes.call(url, param)) {
+                        query.push(key + '=' + val);
+                    } else {
+                        url = url.replace(new RegExp(':' + key, 'g'), val);
+                    }
+                });
+            }
+
+            if (query.length > 0) {
+                url += '?' + query.join('&')
+            }
+            return url;
+        }
+
+        function includes(search, start) {
+            if (typeof start !== 'number') {
+                start = 0;
+            }
+
+            if (start + search.length > this.length) {
+                return false;
+            } else {
+                return this.indexOf(search, start) !== -1;
+            }
+        };
+    };
+
+    // Module Pattern
+    return {
+        getInstance: function(config) {
+            if (INSTANCE === undefined) {
+                INSTANCE = new Singleton(config);
+            }
+            return INSTANCE;
+        }
+    };
+})();
+```
+
 ### Reference
 
 * [JavaScript, jQuery, 그리고 Ajax](http://www.nextree.co.kr/p9521/)
