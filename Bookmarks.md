@@ -38,6 +38,13 @@
 
 * [Node.js: 비동기 프로그래밍 이해](http://www.nextree.co.kr/p7292/) : 비동기 프로그래밍에 대한 설명
 
+## WebGL
+
+### Guide
+
+* [Getting started with WebGL](https://developer.mozilla.org/ko/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL) : WebGL 튜토리얼
+* [Intro to WebGL with Three.js](http://davidscottlyons.com/threejs/presentations/frontporch14/#slide-0) : three.js로 배우는 WebGL 튜토리얼
+
 ## Tools
 
 ### API
@@ -63,7 +70,7 @@
 
 * [Lodash의 지연 평가 소개 by Filip Zawada](http://haruair.com/blog/2983)
 * [MS는 ReactiveX를 왜 만들었을까? (feat. RxJS)](http://huns.me/development/2051)
-<<<<<<< HEAD
+* [http://exercism.io/](http://exercism.io/) : 언어별 다양한 문제 제공
 
 ## DB
 
@@ -75,6 +82,8 @@
 * [PostgreSQL, PAS](http://zetawiki.com/wiki/PostgreSQL,_PPAS) : 위키
 * [jsonb 자료형 다루기](http://postgresql.kr/blog/postgresql_jsonb.html) : 자료형
 * [postgresql 9.4.2 & pgAdmin III 설치하기](http://freeprog.tistory.com/95) : 설치
-=======
-* [http://exercism.io/](http://exercism.io/) : 언어별 다양한 문제 제공
->>>>>>> b8cf83a0c4aada521988476d18d38885d9da069a
+
+## Math
+
+* [벡터 연산 - 분해, 내적, 외적](http://mrw0119.tistory.com/12)
+* [3D 게임 프로그래밍을 위한 기초 수학 - 4. 벡터의 내적](http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_Lecture_series&no=125)
