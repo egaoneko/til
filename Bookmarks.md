@@ -26,6 +26,7 @@
 * [코어 자바스크립트 - JUI](http://blog.jui.io/?cat=5) : JS 전반적인 설명
 * [Function Declarations(함수선언) vs Function Expressions(함수표현)](http://insanehong.kr/post/javascript-function/) : JS Function 설명
 * [javascript ajax 크로스 도메인 요청 하기 (CORS)](http://adrenal.tistory.com/16) : CORS 설명 및 해결책
+* [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) : Javascript design pattern
 
 #### Performance
 
