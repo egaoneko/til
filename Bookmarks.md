@@ -59,18 +59,22 @@
 * [(번역) 훌륭한 프론트엔드 개발자가 되는 법 by Google Engineer](https://joshuajangblog.wordpress.com/2016/07/27/how_to_become_good_front_end_engineer/)
 * [프론트엔드 개발자를 위한 크롬 렌더링 성능 인자 이해하기 - Chang W. Doh](http://www.slideshare.net/cwdoh/gdg-webtech-1)
 * [Service Worker 101 - Chang W. Doh](http://www.slideshare.net/cwdoh/service-worker-101)
+* [HTTP 접근 제어 (CORS)](https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS)
 
 ### Server
 
 * [더 빠른 웹을 위해: HTTP/2 - EungJun Yi](http://www.slideshare.net/eungjun/http2-40582114)
 * [서버 성능에 대한 정의와 이해 - Sunny Kwak](http://www.slideshare.net/sunnykwak90/ss-44875669)
 * [안정적인 서비스 운영 - Changyol BAEK](http://www.slideshare.net/cybaek/201403)
+* [[Spring Cloud] 클라이언트 사이드 로드 밸런싱 (Client side Loadbalancing) 이란 ??](http://blog.leekyoungil.com/?p=259)
 
 ### Etc
 
 * [Lodash의 지연 평가 소개 by Filip Zawada](http://haruair.com/blog/2983)
 * [MS는 ReactiveX를 왜 만들었을까? (feat. RxJS)](http://huns.me/development/2051)
 * [http://exercism.io/](http://exercism.io/) : 언어별 다양한 문제 제공
+* [Currying 어따 써먹냐구요?](https://www.facebook.com/notes/kevin-lee/currying-%EC%96%B4%EB%94%B0-%EC%8D%A8%EB%A8%B9%EB%83%90%EA%B5%AC%EC%9A%94/214522735556858?hc_location=ufi)
+* [람다, 익명 함수, 클로저](https://hyunseob.github.io/2016/09/17/lambda-anonymous-function-closure/)
 
 ## DB
 
@@ -87,3 +91,4 @@
 
 * [벡터 연산 - 분해, 내적, 외적](http://mrw0119.tistory.com/12)
 * [3D 게임 프로그래밍을 위한 기초 수학 - 4. 벡터의 내적](http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_Lecture_series&no=125)
+* [벡터와 외적](http://j1w2k3.tistory.com/635)
