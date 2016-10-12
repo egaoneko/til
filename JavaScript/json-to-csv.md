@@ -78,6 +78,69 @@ link.click(); // This will download the data file named "my_data.csv".
 var uri = 'data:text/csv;charset=UTF-8,\uFEFF' + encodeURI(CSV);
 ```
 
+## Large Json
+
+* [BLOB와 BLOB URL](https://taegon.kim/archives/5078)
+
+```javascript
+function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {     
+
+    //If JSONData is not an object then JSON.parse will parse the JSON string in an Object
+    var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
+    var CSV = '';    
+    //This condition will generate the Label/Header
+    if (ShowLabel) {
+        var row = "";
+
+        //This loop will extract the label from 1st index of on array
+        for (var index in arrData[0]) {
+            //Now convert each value to string and comma-seprated
+            row += index + ',';
+        }
+        row = row.slice(0, -1);
+        //append Label row with line break
+        CSV += row + '\r\n';
+    }
+
+    //1st loop is to extract each row
+    for (var i = 0; i < arrData.length; i++) {
+        var row = "";
+        //2nd loop will extract each column and convert it in string comma-seprated
+        for (var index in arrData[i]) {
+            row += '"' + arrData[i][index] + '",';
+        }
+        row.slice(0, row.length - 1);
+        //add a line break after each row
+        CSV += row + '\r\n';
+    }
+
+    if (CSV == '') {        
+        alert("Invalid data");
+        return;
+    }   
+
+    //this trick will generate a temp "a" tag
+    var link = document.createElement("a");    
+    link.id="lnkDwnldLnk";
+
+    //this part will append the anchor tag and remove it after automatic click
+    document.body.appendChild(link);
+
+    var csv = CSV;  
+    blob = new Blob([csv], { type: 'text/csv' }); 
+    var csvUrl = window.webkitURL.createObjectURL(blob);
+    var filename = 'UserExport.csv';
+    $("#lnkDwnldLnk")
+    .attr({
+        'download': filename,
+        'href': csvUrl
+    }); 
+
+    $('#lnkDwnldLnk')[0].click();    
+    document.body.removeChild(link);
+}
+```
+
 ## Example
 
 [Plunker](https://embed.plnkr.co/U8zQV4/)
@@ -96,16 +159,23 @@ function downloadExcel () {
 
   // Convert Object to JSON
   var jsonObject = JSON.stringify(data);
-  var csvContentType = "data:text/csv;charset=utf-8,\uFEFF";
-  var csvContent = csvContentType + ConvertToCSV(jsonObject, order, head);
-  var encodedUri = encodeURI(csvContent);
+  var csvContentType = "data:text/csv;charset=utf-8";
+  var csvContent = ConvertToCSV(jsonObject, order, head);
   var fileName = ctrl.name + '_' + ctrl.place + '.csv';
   var link = document.createElement("a");
-  link.setAttribute("href", encodedUri);
-  link.setAttribute("download", fileName); // Required for FF
-  document.body.appendChild(link); // Required for FF
-  link.click();
-  document.body.removeChild(link);
+  var blob = new Blob([csvContent], {type: csvContentType});
+
+  if (window.navigator.msSaveBlob) {
+    // FOR IE BROWSER
+    navigator.msSaveBlob(blob, fileName);
+  } else {
+    var csvUrl = window.webkitURL.createObjectURL(blob);
+    link.href = csvUrl;
+    link.style = "visibility:hidden";
+    link.download = fileName;
+    document.body.appendChild(link); // Required for FF
+    link.click();
+    document.body.removeChild(link);
 }
 
 function ConvertToCSV (objArray, order, head) {
@@ -131,8 +201,36 @@ function ConvertToCSV (objArray, order, head) {
 }
 ```
 
+## IE Download
+
+```javascript
+function downloadFile(data, fileName) {
+    var csvData = data;
+    var blob = new Blob([ csvData ], {
+        type : "application/csv;charset=utf-8;"
+    });
+
+    if (window.navigator.msSaveBlob) {
+        // FOR IE BROWSER
+        navigator.msSaveBlob(blob, fileName);
+    } else {
+        // FOR OTHER BROWSERS
+        var link = document.createElement("a");
+        var csvUrl = URL.createObjectURL(blob);
+        link.href = csvUrl;
+        link.style = "visibility:hidden";
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+}
+```
+
 ## Reference
 
 * [JSON to CSV](http://www.zachhunter.com/2011/06/json-to-csv/)
 * [stack overflow](http://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side)
 * [json to csv 출력(한글해결 포함)](http://codezip.tistory.com/697)
+* [stack overflow](http://stackoverflow.com/questions/25009295/how-to-export-large-amount-of-json-data-to-csv-without-browser-crash)
+* [stack overflow](http://stackoverflow.com/questions/23301467/javascript-exporting-large-text-csv-file-crashes-google-chrome)
