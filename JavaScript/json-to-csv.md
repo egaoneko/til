@@ -128,7 +128,7 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
 
     var csv = CSV;  
     blob = new Blob([csv], { type: 'text/csv' }); 
-    var csvUrl = window.webkitURL.createObjectURL(blob);
+    var csvUrl = window.URL.createObjectURL(blob);
     var filename = 'UserExport.csv';
     $("#lnkDwnldLnk")
     .attr({
