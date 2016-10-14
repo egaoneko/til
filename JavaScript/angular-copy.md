@@ -57,3 +57,4 @@ document.append(selected.select.element);
 ### Reference
 
 * [angular.copy](https://docs.angularjs.org/api/ng/function/angular.copy)
+* [angular.copy - Deep Copy, Shallow Copy의 차이점](http://programmingsummaries.tistory.com/335)
