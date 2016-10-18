@@ -27,15 +27,21 @@
             $scope.lessObject = {
                 name: "lessObject"
             };
-
+    
             $scope.ampFuncCtrl = function(amp) {
                 alert(amp);
+            }
+            
+            var closure = 'closure';
+            $scope.ampFuncCtrlClosure = function(amp) {
+                alert(closure + amp);
             }
         }]).
         controller('demoCtrl2', function() {
             this.at = 'at';
             this.amp = 'amp';
             this.equal = 'equal';
+            this.less = 'less';
             this.ampFuncCtrl = function(amp) {
                 alert(amp);
             }
@@ -47,13 +53,17 @@
                 template: [
                     '<h3><span>{{at}}</span><input type="text" ng-model="at"></h3>',
                     '<h3><button ng-click="ampFunc()">amp</button></h3>',
-                    '<h3><span>{{equal}}</span><input type="text" ng-model="equal"></h3>'
+                    '<h3><button ng-click="ampFuncClosure()">amp</button></h3>',
+                    '<h3><span>{{equal}}</span><input type="text" ng-model="equal"></h3>',
+                    '<h3><span>{{less}}</span><input type="text" ng-model="less"></h3>'
                 ].join(''),
                 restrict: "AE",
                 scope: {
                     at: "@",
                     ampFunc: "&",
-                    equal: "="
+                    ampFuncClosure: "&",
+                    equal: "=",
+                    less: "<"
                 }
             }
         }).
@@ -62,7 +72,8 @@
                 template: [
                     '<h3><span>{{$ctrl.at}}</span><input type="text" ng-model="$ctrl.at"></h3>',
                     '<h3><button ng-click="$ctrl.ampFunc()">amp</button></h3>',
-                    '<h3><span>{{$ctrl.equal}}</span><input type="text" ng-model="$ctrl.equal"></h3>'
+                    '<h3><span>{{$ctrl.equal}}</span><input type="text" ng-model="$ctrl.equal"></h3>',
+                    '<h3><span>{{$ctrl.less}}</span><input type="text" ng-model="$ctrl.less"></h3>'
                 ].join(''),
                 restrict: "AE",
                 controller: "demoCtrl2",
@@ -70,7 +81,8 @@
                 // scope: {
                     // at: "@",
                     // ampFunc: "&",
-                    // equal: "="
+                    // equal: "=",
+                    // less: "<"
                 // }
             }
         }).
@@ -79,7 +91,8 @@
                 template: [
                     '<h3><span>{{$ctrl.at}}</span><input type="text" ng-model="$ctrl.at"></h3>',
                     '<h3><button ng-click="$ctrl.ampFunc()">amp</button></h3>',
-                    '<h3><span>{{$ctrl.equal}}</span><input type="text" ng-model="$ctrl.equal"></h3>'
+                    '<h3><span>{{$ctrl.equal}}</span><input type="text" ng-model="$ctrl.equal"></h3>',
+                    '<h3><span>{{$ctrl.less}}</span><input type="text" ng-model="$ctrl.less"></h3>'
                 ].join(''),
                 restrict: "AE",
                 controller: "demoSubCtrl",
@@ -88,7 +101,8 @@
                 bindToController: {
                     at: "@",
                     ampFunc: "&",
-                    equal: "="
+                    equal: "=",
+                    less: "<"
                 }
             }
         }).
@@ -128,23 +142,31 @@
         <input type="text" ng-model="ctrl2.at"><br>
         <input type="text" ng-model="ctrl2.amp"><br>
         <input type="text" ng-model="ctrl2.equal"><br>
+        <input type="text" ng-model="ctrl2.less"><br>
         <hr>
     </div>
 
     <h1>Dirc1</h1>
-    <div dirc1 at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal"></div>
+    <div
+        dirc1 
+        at="at" 
+        amp-func="ampFuncCtrl(amp, this)" 
+        amp-func-closure="ampFuncCtrlClosure(amp, this)" 
+        equal="equal" 
+        less="less">
+    </div>
     <hr>
 
     <h1>Dirc2</h1>
-    <div dirc2 at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal"></div>
+    <div dirc2 at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal" less="less"></div>
     <hr>
 
     <h1>Dirc3</h1>
-    <div dirc3 at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal"></div>
+    <div dirc3 at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal" less="less"></div>
     <hr>
 
     <h1>Comp1</h1>
-    <!-- div comp at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal" --></div>
+    <!-- div comp at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal"></div -->
     <comp at="at" amp-func="ampFuncCtrl(amp, this)" equal="equal"
         less="less" less-object="lessObject"></comp>
     <hr>
