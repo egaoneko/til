@@ -92,3 +92,4 @@ app.controller('Controller1', ['$scope', '$rootScope', function($scope, $rootSco
 ## Reference
 
 * [stack overflow](http://stackoverflow.com/questions/19446755/on-and-broadcast-in-angular)
+* [$on(), $broadcast() and $emit()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$on)
