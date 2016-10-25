@@ -197,9 +197,52 @@ GraphQL은 클라이언트 애플리케이션에서 어떤 데이터가 필요�
 * 쿼리를 클라이언트의 UI 계층 구조와 유사하게 구성
 * 스키마가 미리 정의되어 있는 강타입 언어
 
+[GraphQL](http://graphql.org/learn/)
+
+#### Type
+
+```javascript
+type Query {
+  me: User
+}
+
+type User {
+  id: ID
+  name: String
+}
+
+function Query_me(request) {
+  return request.auth.user;
+}
+
+function User_name(user) {
+  return user.getName();
+}
+```
+
+#### Query
+```javascript
+{
+  me {
+    name
+  }
+}
+```
+
+#### Result
+```javascript
+{
+  "me": {
+    "name": "Luke Skywalker"
+  }
+}
+```
+
 ### Relay
 
 Relay는 GraphQL과 React로 애플리케이션을 개발하기 위한 프레임워크
+
+[Relay](https://facebook.github.io/relay/)
 
 ### 요약
 
@@ -217,8 +260,6 @@ Relay는 GraphQL과 React로 애플리케이션을 개발하기 위한 프레임
 
 ## Inside Fuse
 
-Fuse : 앱개발 플랫폼을 개발하는 회사
-
 ### What is Fuse?
 
 * Native mobile app development platform/engine
@@ -226,6 +267,77 @@ Fuse : 앱개발 플랫폼을 개발하는 회사
 * Annimation & UI in easy XML
 * Buisiness logic in plain javascript
 * optional: angular 2
+
+![Example](https://res.cloudinary.com/fusetools/image/upload/w_450%2Ch_450%2Cdpr_1.0%2Cc_limit/example_v2/716a9535aa929126ffe689dfe4f6ede1__media/layout-example.webp)
+
+```javascript
+<App>
+    <Image ux:Class="Icon" Density="2" StretchMode="PointPrecise" />
+    <Font File="Assets/OpenSans-SemiBold.ttf" ux:Global="SemiBold" />
+
+    <Grid ColumnCount="1" Rows="4.5*,100,4*">
+        <Fuse.iOS.StatusBarConfig Style="Light" />
+
+        <Text ux:Class="DefaultText" Color="#fff" Font="SemiBold" />
+
+        <Grid Row="1" RowCount="1" Columns="Auto,Auto,1*" Color="#00000088">
+            <DefaultText Margin="20,0,0,20" Alignment="Bottom" FontSize="70">73°</DefaultText>
+            <Icon Margin="15,0,15,25" Alignment="Bottom" File="Assets/PartlyCloudyIconWhite.png" />
+            <WrapPanel Margin="0,0,0,20" Alignment="Bottom">
+                <DefaultText Value="SUNDAY, "/>
+                <DefaultText Value="MARCH "/>
+                <DefaultText Value="23" />
+            </WrapPanel>
+        </Grid>
+        <Image Row="0" RowSpan="2" File="Assets/PaloAlto.png" StretchMode="UniformToFill" />
+        <DockPanel Row="2" Color="#f3f3f3">
+            <Grid ColumnCount="6" RowCount="1" Dock="Top" Height="80">
+                <DefaultText ux:Class="StatText" Color="#1c1c1c" FontSize="14" Alignment="CenterLeft" />
+                <Icon ux:Class="StatIcon" Margin="6" Alignment="CenterRight" />
+
+                <Rectangle Alignment="Top" Height="1" Fill="#999b9b" Layer="Background" />
+
+                <StatIcon File="Assets/FlagIcon.png" />
+                <StatText>4 MPH</StatText>
+                <StatIcon File="Assets/CompassIcon.png" />
+                <StatText>SOUTH</StatText>
+                <StatIcon File="Assets/UmbrellaIcon.png" />
+                <StatText>23%</StatText>
+            </Grid>
+            <Grid RowCount="4" ColumnCount="5">
+                <Rectangle Alignment="Top" Height="1" Fill="#999b9b" Layer="Background" />
+                <DefaultText ux:Class="Weekday" Color="#939393" Alignment="Center" FontSize="12" />
+                <DefaultText ux:Class="Temperature" Color="#333333" Alignment="Center" FontSize="20" Margin="6,0,0,0" />
+                <Weekday>MON</Weekday>
+                <Weekday>TUE</Weekday>
+                <Weekday>WED</Weekday>
+                <Weekday>THU</Weekday>
+                <Weekday>FRI</Weekday>
+                <Icon File="Assets/CloudsIcon.png" />
+                <Icon File="Assets/SunnyIcon.png" />
+                <Icon File="Assets/PartlyCloudyIcon.png" />
+                <Icon File="Assets/PartlyCloudyIcon.png" />
+                <Icon File="Assets/SunnyIcon.png" />
+                <Temperature>83°</Temperature>
+                <Temperature>85°</Temperature>
+                <Temperature>81°</Temperature>
+                <Temperature>82°</Temperature>
+                <Temperature>86°</Temperature>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</App>
+```
+
+### 성능 문제 없이 JavaScript를 사용하여 앱을 빌드를 어떻게?
+
+![Single Thread](http://image.slidesharecdn.com/insidefuse-deview2016-161023163118/95/143inside-fuse-deview-2016-12-638.jpg?cb=1477284627)
+
+![Two Thread](http://image.slidesharecdn.com/insidefuse-deview2016-161023163118/95/143inside-fuse-deview-2016-24-638.jpg?cb=1477284627)
+
+* UI Render는 main thread 위에서 이루어지며, 나머지 JS business logic은 background thread에서 이루어진다.
+
+* 두 UI와 JS간 통신은 Observable을 사용하여 이루어진다.
 
 ## Angular2 VS React
 
