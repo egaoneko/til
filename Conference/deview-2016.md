@@ -260,6 +260,14 @@ Relay는 GraphQL과 React로 애플리케이션을 개발하기 위한 프레임
 
 ## Inside Fuse
 
+XML로 Native App을 쉽게 만들 수 있는 Fuse에 대한 소개와 Fuse가 App을 JavaScript로 빌드할 때 어떻게 성능을 확보하였는지가 흥미로웠던 트랙이었다.
+
+[Fuse](http://fusetools.com/)
+
+[slide](http://www.slideshare.net/deview/143inside-fuse-deview-2016)
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/r3Vpe3SL5vYXkZ" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/deview/143inside-fuse-deview-2016" title="[143]Inside fuse deview 2016" target="_blank">[143]Inside fuse deview 2016</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/deview">NAVER D2</a></strong> </div>
+
 ### What is Fuse?
 
 * Native mobile app development platform/engine
@@ -341,13 +349,151 @@ Relay는 GraphQL과 React로 애플리케이션을 개발하기 위한 프레임
 
 ## Angular2 VS React
 
-왜 사용하는 걸까? => 생산성
+화제의 React와 Angular2에 대해 다룬 강연이었기에 해당일의 많은 발표 중 가장 큰 관심을 가지고 들었던 강연이었다. Angular2와 React에 대해서 많은 내용을 볼 수 있었다.
 
-생산성?
+[slide](http://www.slideshare.net/deview/114angularvs-react)
 
-* 학습 비용
-* 생태계
-* 신뢰성
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/1Ru6BcWHvxZ7nc" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/deview/114angularvs-react" title="[114]angularvs react 김훈민손찬욱" target="_blank">[114]angularvs react 김훈민손찬욱</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/deview">NAVER D2</a></strong> </div>
+
+* 파일 크기, 성능으로 비교하기엔 미비함
+* 왜 사용하는 걸까? => 생산성
+
+### 생산성?
+
+* ~~학습 비용~~
+* ~~생태계~~
+* ~~신뢰성~~ 들은 제외
 * 개발환경 구축/유지
 * 코드 구현의 용이성
 * 커뮤니케이션
+
+### 언어의 생산성
+
+* JavaScript의 영역 확장
+* 애플리케이션의 다양성과 복잡도 증가
+* 대규모 협업시 동적 언어의 한계
+
+#### React
+
+* Flow
+	* Facebook이 만든 정적 타입 검사기
+	* React와 별개 프로젝트이지만 함께 사용할 수 있음
+	* 4% 미만의 사용율
+
+#### Angular
+
+* TypeScript
+	* 선택사항 (TypeScript, JavaScript, Dart 중)
+	* Angular의 고민, 언어의 생산성 향상 (AtScript -> TypeScript)
+		* ES2015의 생산성 극대화
+		* Optional Type
+		* Metadata
+		* 웹표준 지향
+
+```javascript
+/**
+ * TypeScript
+ */
+function sum(value: Array<number>): number {
+	return value.reduce((sum, v) => sum + v),0);
+}
+
+/**
+ * JavaScript
+ */
+function sum(value) {
+	if(Array:isArray(value)) {
+    	return value.reduce((sum, v) => {
+        	return parseInt(sum + v), 0);
+        });
+    } else {
+    	return 0;
+    }
+}
+```
+
+타입을 쓰는 비용이 타입을 쓰지 않는 비용보다 많지 않다.
+
+### 컴포넌트
+
+* 하나의 독립된 기능
+* 수행하는 최소 단위 UI
+* Angular2와 React 모두 컴포넌트 설계를 지향
+
+#### React
+
+* 기본으로 제공하지 않는 CSS 캡슐화
+* JS안의 JSX, but Syntactic Sugar 일뿐
+
+#### Angular
+
+* 템플릿 : 순수하지 못한 HTML
+
+### 데이터 동기화
+
+* 뷰와 모델의 분리
+* 데이터 동기화 문제 등장
+* UI 개발 프레임워크가 책임지는 핵심
+
+#### React
+
+* Virtual DOM
+* `dom <- model` : framework 담당
+* `dom -> model` : 명시적 호출
+
+![react](http://image.slidesharecdn.com/114angularvsreact-161023163723/95/114angularvs-react-94-638.jpg?cb=1477285700)
+
+#### Angular
+
+* 무분별한 양방향 데이터 동기화 제거
+
+```xml
+<!-- Angular1 2way-binding-->
+<h1>{{data}}</h1>
+
+<!-- Angular2 1way-binding-->
+<h1>{{data}}</h1>
+```
+
+* React의 Vitrual DOM과 비슷한 갱신
+* 실행영역에서 발생하는 작업을 Profile하는 Zone
+
+> Angular1의 데이터 바인딩
+> + React 데이터 플로우의 심플함
+> + Zone을 이용한 사용성 개선
+
+* `dom <- model` : framework 담당
+* `dom -> model` : framework 담당
+
+![angular](http://image.slidesharecdn.com/114angularvsreact-161023163723/95/114angularvs-react-95-638.jpg?cb=1477285700)
+
+### 비동기 처리
+
+* 인터랙션 이벤트, 애니메이션, XMLHttpRequest, 등.....
+* Angular2 with RxJS
+
+[MS는 ReactiveX를 왜 만들었을까? (feat. RxJS)](http://huns.me/development/2051)
+
+### 그래서, 선택은?
+
+![react vs angular2](http://image.slidesharecdn.com/114angularvsreact-161023163723/95/114angularvs-react-120-638.jpg?cb=1477285700)
+
+## Clean Frontend Development
+
+당일 들었던 많은 강연 중에서 듣고 난 후 가장 많은 생각이 들게한 강연이다. JS에 대해서 더 많은 공부가 필요함을 느꼈고, 라이브러리에 의존적인 부분을 개선해야겠다는 생각이 들었다.
+
+[slide](http://www.slideshare.net/deview/115-clean-fe-development)
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/NOx3WHIqsHktsa" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/deview/115-clean-fe-development" title="[115] clean fe development_윤지수" target="_blank">[115] clean fe development_윤지수</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/deview">NAVER D2</a></strong> </div>
+
+standard Code, with all tools
+
+* Clean jQueryFree
+* Clean Modules
+* Clean Two-way data binding
+* Clean Asynchronous
+* Clean Templating
+* Clean Virtual DOM
+* Clean Loose Coupling
+
+polyfill과 es2015, 2016에 추가된 내용으로 상단의 것들을 대체할 수 있으며, 그로서 지속가능하고 성능을 개선할 수 있다.
