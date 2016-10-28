@@ -68,6 +68,13 @@
 * [안정적인 서비스 운영 - Changyol BAEK](http://www.slideshare.net/cybaek/201403)
 * [[Spring Cloud] 클라이언트 사이드 로드 밸런싱 (Client side Loadbalancing) 이란 ??](http://blog.leekyoungil.com/?p=259)
 
+### Unit Test
+
+* [Unitils](http://www.unitils.org/summary.html)
+* [REST Assured](http://rest-assured.io/)
+* [AssertJ](http://joel-costigliola.github.io/assertj/)
+* [Awaitility](https://github.com/awaitility/awaitility)
+
 ### Etc
 
 * [Lodash의 지연 평가 소개 by Filip Zawada](http://haruair.com/blog/2983)
