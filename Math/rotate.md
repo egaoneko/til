@@ -1,7 +1,7 @@
 # 회전 변환
 
-x' = x * cosΘ - y * sinΘ
-y' = x * sinΘ + y * cosΘ
+* x' = x * cosΘ - y * sinΘ
+* y' = x * sinΘ + y * cosΘ
 
 ![rotate.png](../img/Math/rotate/rotate.png)
 ![rotate.png](../img/Math/rotate/rotate2.png)
