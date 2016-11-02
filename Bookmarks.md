@@ -99,3 +99,10 @@
 * [벡터 연산 - 분해, 내적, 외적](http://mrw0119.tistory.com/12)
 * [3D 게임 프로그래밍을 위한 기초 수학 - 4. 벡터의 내적](http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_Lecture_series&no=125)
 * [벡터와 외적](http://j1w2k3.tistory.com/635)
+
+## Speci
+
+### W3C
+
+* [XMLHttpRequest Level 1](https://www.w3.org/TR/XMLHttpRequest/)
+* [XMLHttpRequest](https://xhr.spec.whatwg.org/)
