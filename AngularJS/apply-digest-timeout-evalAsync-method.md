@@ -31,11 +31,12 @@ $apply: function(expr) {
     }
 }
 ```
-[source](https://github.com/angular/angular.js/blob/master/src/ng/rootScope.js#L1068)
+
+* [source](https://github.com/angular/angular.js/blob/master/src/ng/rootScope.js#L1068)
 
 ## $digest()
 
-Processes all of the watchers of the current scope and its children. [source](https://github.com/angular/angular.js/blob/master/src/ng/rootScope.js#L754)
+Processes all of the watchers of the current scope and its children.
 
 ```javascript
 if (this === $rootScope && applyAsyncId !== null) {
@@ -45,6 +46,8 @@ if (this === $rootScope && applyAsyncId !== null) {
   flushApplyAsync();
 }
 ```
+
+* [source](https://github.com/angular/angular.js/blob/master/src/ng/rootScope.js#L754)
 
 ## $timeout(prior to AngularJS 1.2.X.)
 
@@ -73,9 +76,9 @@ var args = sliceArgs(arguments, 3),
   promise.$$timeoutId = timeoutId;
   deferreds[timeoutId] = deferred;
 ```
-[source](https://github.com/angular/angular.js/blob/07849779ba365f371a8caa3b58e23f677cfdc5ad/src/ng/timeout.js#L53)
-[$browser](https://github.com/angular/angular.js/blob/master/src/ng/browser.js)
-[stack overflow](http://stackoverflow.com/questions/23070822/angular-scope-apply-vs-timeout-as-a-safe-apply)
+* [source](https://github.com/angular/angular.js/blob/07849779ba365f371a8caa3b58e23f677cfdc5ad/src/ng/timeout.js#L53)
+* [$browser](https://github.com/angular/angular.js/blob/master/src/ng/browser.js)
+* [stack overflow](http://stackoverflow.com/questions/23070822/angular-scope-apply-vs-timeout-as-a-safe-apply)
 
 
     This object has two goals:
@@ -99,7 +102,8 @@ if (!$rootScope.$$phase && !asyncQueue.length) {
 }
 ```
 
-[$scope.$evalAsync() vs. $timeout() In AngularJS](http://bennadel.github.io/JavaScript-Demos/demos/eval-async-vs-timeout-angularjs/)
+* [$apply vs $timeout vs $digest vs $evalAsync](http://www.codingeek.com/angularjs/angular-js-apply-timeout-digest-evalasync/)
+* [$scope.$evalAsync() vs. $timeout() In AngularJS](http://bennadel.github.io/JavaScript-Demos/demos/eval-async-vs-timeout-angularjs/)
 
 ## Example
 

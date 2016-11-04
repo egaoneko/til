@@ -52,6 +52,7 @@
 * [Fiddler](http://www.telerik.com/fiddler) : 웹 디버깅 프록시
 * [SlideShare - Fiddler: 웹 디버깅 프록시](http://www.slideshare.net/taggon/fiddler-27055698)
 * [웹 디버깅 툴로 알려진 피들러(Fiddler)- Web Debugging Proxy](http://www.dsun.kr/23)
+* [지극히 주관적이고 안친절한 Fiddler 사용법](http://nisam.tistory.com/5)
 
 ### API
 
