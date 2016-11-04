@@ -47,6 +47,12 @@
 
 ## Tools
 
+### Web
+
+* [Fiddler](http://www.telerik.com/fiddler) : 웹 디버깅 프록시
+* [SlideShare - Fiddler: 웹 디버깅 프록시](http://www.slideshare.net/taggon/fiddler-27055698)
+* [웹 디버깅 툴로 알려진 피들러(Fiddler)- Web Debugging Proxy](http://www.dsun.kr/23)
+
 ### API
 
 * [Swagger로 REST API 문서 자동화 하기](http://jojoldu.tistory.com/31) : Swagger 설명
@@ -100,7 +106,7 @@
 * [3D 게임 프로그래밍을 위한 기초 수학 - 4. 벡터의 내적](http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_Lecture_series&no=125)
 * [벡터와 외적](http://j1w2k3.tistory.com/635)
 
-## Speci
+## Specification
 
 ### W3C
 
