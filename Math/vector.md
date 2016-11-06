@@ -15,6 +15,15 @@
 
 * 법선 벡터(노말 벡터)
 
+### 노말 벡터에서 수직인 벡터 (2D)
+
+* (0, 1)인 노말 벡터에 수직인 벡터 : (1, 0)
+* (-1, 0)인 노말 벡터에 수직인 벡터 : (0, 1)
+
+`(x, y) -> (y, -x)`
+
+* [gamedev](http://www.gamedev.net/topic/666236-converting-axis-angles-forward-right-up-to-euler/)
+
 ### Reference
 
 * [벡터 연산 - 분해, 내적, 외적](http://mrw0119.tistory.com/12)

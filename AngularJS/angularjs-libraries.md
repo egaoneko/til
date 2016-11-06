@@ -9,3 +9,4 @@
 ### Grid
 
 * [UI.Grid](https://github.com/angular-ui/ui-grid) (Demo : [UI-Grid](http://ui-grid.info/))
+* [Angular-vs-repeat](https://github.com/kamilkp/angular-vs-repeat) (Demo : [Angular-vs-repeat](http://kamilkp.github.io/angular-vs-repeat/#?tab=8))

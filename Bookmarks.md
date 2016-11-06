@@ -47,6 +47,13 @@
 
 ## Tools
 
+### Web
+
+* [Fiddler](http://www.telerik.com/fiddler) : 웹 디버깅 프록시
+* [SlideShare - Fiddler: 웹 디버깅 프록시](http://www.slideshare.net/taggon/fiddler-27055698)
+* [웹 디버깅 툴로 알려진 피들러(Fiddler)- Web Debugging Proxy](http://www.dsun.kr/23)
+* [지극히 주관적이고 안친절한 Fiddler 사용법](http://nisam.tistory.com/5)
+
 ### API
 
 * [Swagger로 REST API 문서 자동화 하기](http://jojoldu.tistory.com/31) : Swagger 설명
@@ -67,6 +74,13 @@
 * [서버 성능에 대한 정의와 이해 - Sunny Kwak](http://www.slideshare.net/sunnykwak90/ss-44875669)
 * [안정적인 서비스 운영 - Changyol BAEK](http://www.slideshare.net/cybaek/201403)
 * [[Spring Cloud] 클라이언트 사이드 로드 밸런싱 (Client side Loadbalancing) 이란 ??](http://blog.leekyoungil.com/?p=259)
+
+### Unit Test
+
+* [Unitils](http://www.unitils.org/summary.html)
+* [REST Assured](http://rest-assured.io/)
+* [AssertJ](http://joel-costigliola.github.io/assertj/)
+* [Awaitility](https://github.com/awaitility/awaitility)
 
 ### Etc
 
@@ -92,3 +106,10 @@
 * [벡터 연산 - 분해, 내적, 외적](http://mrw0119.tistory.com/12)
 * [3D 게임 프로그래밍을 위한 기초 수학 - 4. 벡터의 내적](http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_Lecture_series&no=125)
 * [벡터와 외적](http://j1w2k3.tistory.com/635)
+
+## Specification
+
+### W3C
+
+* [XMLHttpRequest Level 1](https://www.w3.org/TR/XMLHttpRequest/)
+* [XMLHttpRequest](https://xhr.spec.whatwg.org/)
