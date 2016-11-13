@@ -4,3 +4,5 @@
 * [네이버 쇼핑의 새로운 카드형 UI 라이브러리, eg.InfiniteGrid](http://d2.naver.com/helloworld/4874130)
 * [북마크가 꼭 필요한 UI 가이드라인 45개 소개](https://brunch.co.kr/@ebprux/85)
 * [북마크가 꼭 필요한 UX 사이트 29개 소개](https://brunch.co.kr/@ebprux/83)
+* [이런 에러페이지를 만난다면, 오히려 색다른 경험이 되지 않을까?
+11월 6, 2016ZAGMASTER미분류](http://icunow.co.kr/?p=265)
