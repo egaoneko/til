@@ -49,3 +49,5 @@ function generateBoxes (row, col, position, size, space) {
   return boxes;
 }
 ```
+
+* [Plunker](https://plnkr.co/edit/va5xfX?p=preview)
