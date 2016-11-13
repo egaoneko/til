@@ -39,10 +39,10 @@ function generateBoxes (row, col, position, size, space) {
         normal: {x:1, y:1},
         center: {x: centerX, y: centerY},
         bound: [
-          {x: centerX - 2, y: centerY - 2},
-          {x: centerX + 2, y: centerY - 2},
-          {x: centerX + 2, y: centerY + 2},
-          {x: centerX - 2, y: centerY + 2}]
+          {x: centerX - center, y: centerY - center},
+          {x: centerX + center, y: centerY - center},
+          {x: centerX + center, y: centerY + center},
+          {x: centerX - center, y: centerY + center}]
       });
     }
   }
