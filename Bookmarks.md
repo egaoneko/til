@@ -53,6 +53,7 @@
 * [SlideShare - Fiddler: 웹 디버깅 프록시](http://www.slideshare.net/taggon/fiddler-27055698)
 * [웹 디버깅 툴로 알려진 피들러(Fiddler)- Web Debugging Proxy](http://www.dsun.kr/23)
 * [지극히 주관적이고 안친절한 Fiddler 사용법](http://nisam.tistory.com/5)
+* [빠른 생산성을 위해서 재기동 없이 서버 Hot swapping 하는 방법 (IntelliJ & Eclipse)](https://beyondj2ee.wordpress.com/2015/10/24/%EB%B9%A0%EB%A5%B8-%EC%83%9D%EC%82%B0%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%B4%EC%84%9C-%EC%9E%AC%EA%B8%B0%EB%8F%99-%EC%97%86%EC%9D%B4-%EC%84%9C%EB%B2%84-hot-swapping-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/)
 
 ### API
 
@@ -67,6 +68,7 @@
 * [프론트엔드 개발자를 위한 크롬 렌더링 성능 인자 이해하기 - Chang W. Doh](http://www.slideshare.net/cwdoh/gdg-webtech-1)
 * [Service Worker 101 - Chang W. Doh](http://www.slideshare.net/cwdoh/service-worker-101)
 * [HTTP 접근 제어 (CORS)](https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS)
+* [FEDevelopers/tech.description](https://github.com/FEDevelopers/tech.description/wiki/%EB%B2%88%EC%97%AD-%EB%AC%B8%EC%84%9C)
 
 ### Server
 
