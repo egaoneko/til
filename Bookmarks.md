@@ -17,6 +17,10 @@
 * [CSS Layout Generator](http://csslayoutgenerator.com/) : CSS Layout 생성
 * [PlaceHold](http://placehold.it/) : 빈 이미지 생성 (http://placehold.it/{width}x{height})
 
+### Skill
+
+* [최고의 CSS 중앙정렬 기법](https://webdesign.tutsplus.com/ko/tutorials/the-holy-grail-of-css-centering--cms-22114?utm_medium=social&utm_source=facebook&utm_campaign=fb_webfrontend) : 중앙 정렬
+
 ## JavaScript
 
 ### Pure
@@ -69,6 +73,7 @@
 * [Service Worker 101 - Chang W. Doh](http://www.slideshare.net/cwdoh/service-worker-101)
 * [HTTP 접근 제어 (CORS)](https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS)
 * [FEDevelopers/tech.description](https://github.com/FEDevelopers/tech.description/wiki/%EB%B2%88%EC%97%AD-%EB%AC%B8%EC%84%9C)
+* [Gulp.js로 빌드 작업 관리하기](https://code.tutsplus.com/ko/tutorials/managing-your-build-tasks-with-gulpjs--net-36910?utm_medium=social&utm_source=facebook&utm_campaign=fb_webfrontend)
 
 ### Server
 
