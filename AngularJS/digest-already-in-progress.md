@@ -1,12 +1,34 @@
 # $digest already in progress
 
+## Cause
+
 ```javascript
-if (!$scope.$$phase) {
-  $scope.$apply();
-}
+$scope.apply(function() {
+  // some code...
+  $scope.apply(function() { ... });
+});
 ```
 
-`ng-repeat`으로 양방향 바인딩되어 있는 데이터를 갱신하기 위해서 `$scope.$apply()`를 사용하여 처리하고자 하였지만 해결되지 않았다. 또한 이를 사용하는 것은 [좋지 못한 방법](https://github.com/angular/angular.js/wiki/Anti-Patterns)이다.
+Hence the error "digest already in progress" can only occur in one situation: When an $apply is issued inside another $apply.
+
+## Solution 1
+
+```javascript
+if(!$scope.$$phase) {
+  //$digest or $apply
+}
+
+if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
+    $scope.$apply();
+}
+
+```
+
+> Don't do `if (!$scope.$$phase) $scope.$apply()`, it means your `$scope.$apply()` isn't high enough in the call stack.
+
+* [Anti Patterns](https://github.com/angular/angular.js/wiki/Anti-Patterns)
+
+## Solution 2
 
 ```javascript
 $timeout(function(){
@@ -14,11 +36,54 @@ $timeout(function(){
   $scope.myvar = newValue;
   // And it just works!
 });
+
+$scope.$evalAsync(function() {
+	....
+});
 ```
 
-이를 해결하기 위하여 `$timeout`을 사용하였고 이는 잘 작동하였다.
+* [$apply() & $digest() & $timeout() & $evalAsync()](./apply-digest-timeout-evalAsync-method.md)
 
-### Reference
+## Solution 3 (Best)
 
-* [AngularJS error: “digest already in progress”](http://davidburgosonline.com/dev/2014/correctly-fix-angularjs-error-digest-already-in-progress/)
+```javascript
+// Safe
+setTimeout(function () {
+    $scope.$apply(function () {
+        $scope.message = "Timeout called!";
+    });
+}, 2000);
+
+// Safe
+$scope.$apply(function () {
+    setTimeout(function () {
+        $scope.$apply(function () {
+            $scope.message = "Timeout called!";
+        });
+    }, 2000);
+});
+
+// Not safe
+// Because $timeout call $rootScope.$apply()
+$timeout(function () {
+    $scope.$apply(function () {
+        $scope.message = "Timeout called!";
+    });
+}, 2000);
+```
+
+This situation can not arise if we use `$scope.apply` in a pure non-angularjs callback, like for example the callback of `setTimeout`. So the following code is 100% bulletproof and there is no need to do a `if (!$scope.$$phase) $scope.$apply()`.
+
+Due to how your browser executes Javascript, it is not possible that two digest calls collide by chance.
+
+>The JavaScript code we write doesn’t all run in one go, instead it executes in turns. Each of these turns runs uninterupted from start to finish, and when a turn is running, nothing else happens in our browser. (from http://jimhoskins.com/2012/12/17/angularjs-and-apply.html)
+
+
+## Reference
+
+* [stack oveflow](http://stackoverflow.com/questions/22346990/why-is-using-ifscope-phase-scope-apply-an-anti-pattern)
+* [AngularJS and scope.$apply](http://jimhoskins.com/2012/12/17/angularjs-and-apply.html)
 * [stack overflow](http://stackoverflow.com/questions/12729122/angularjs-prevent-error-digest-already-in-progress-when-calling-scope-apply)
+* [Anti Patterns](https://github.com/angular/angular.js/wiki/Anti-Patterns)
+* [Scope](https://docs.angularjs.org/guide/scope)
+* [AngularJS error: “digest already in progress”](http://davidburgosonline.com/dev/2014/correctly-fix-angularjs-error-digest-already-in-progress/)
