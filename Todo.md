@@ -1,13 +1,5 @@
 # Todo
 
-## Angular : scope.apply()
-
-* [stack oveflow](http://stackoverflow.com/questions/22346990/why-is-using-ifscope-phase-scope-apply-an-anti-pattern)
-* [AngularJS and scope.$apply](http://jimhoskins.com/2012/12/17/angularjs-and-apply.html)
-* [stack overflow](http://stackoverflow.com/questions/12729122/angularjs-prevent-error-digest-already-in-progress-when-calling-scope-apply)
-* [Anti Patterns](https://github.com/angular/angular.js/wiki/Anti-Patterns)
-* [Scope](https://docs.angularjs.org/guide/scope)
-
 ## Canvas
 
 * [SVGMatrix](https://developer.mozilla.org/ko/docs/Web/API/SVGMatrix)
