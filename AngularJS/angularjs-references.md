@@ -28,3 +28,4 @@
 * [AngularJS: 사용자정의 디렉티브(directive) 이야기](http://www.nextree.co.kr/p4850/)
 * [Angular.js의 ngClass 사용방법](https://blog.outsider.ne.kr/1045)
 * [[AngularJS] Service 종류 이해하기](http://mobicon.tistory.com/329)
+* [[AngularJS] 쉽지만 쉽지않은 $timeout 서비스](http://programmingsummaries.tistory.com/348)
