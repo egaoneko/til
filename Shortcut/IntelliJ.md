@@ -8,14 +8,14 @@
 | Ctrl + Shift + Space | 향상된 자동 완성 |
 | Ctrl + Shift + Enter | Complete statement |
 | Ctrl + P | 함수호출 시 인수 정보 확인 |
-| Ctrl + Q | 코드에 대한 문서 창 팝업 |
-| Shift + F| 코드에 대한 문서 인터넷 브라우저로 팝업  |
+| Ctrl + Q | 코드에 대한 문서 창 팝업(Java Doc) * |
+| Shift + F1 | 코드에 대한 문서 인터넷 브라우저로 팝업  |
 | Ctrl + mouse  | 코드를 링크처럼 타고 들어감 |
-| Ctrl + F| Show descriptions of error or warning at caret |
+| Ctrl + F1 | Show descriptions of error or warning at caret |
 | Alt + Insert | 코드 생성 (Getters, Setters, Constructors, hashCode/equals, toString) |
 | Ctrl + O | 메서드 오버라이드 구현 |
 | Ctrl + I  | 인터페이스 메서드 구현 |
-| Ctrl + Alt + T | 다음으로 코드 감싸기 (if..else, try..catch, for,synchronized, etc.) |
+| Ctrl + Alt + T | 다음으로 코드 감싸기 (if..else, try..catch, for,synchronized, etc.) * |
 | Ctrl + / | 현재의 라인을 주석화 또는 주석 해제 |
 | Ctrl + Shift + / | 선택된 영역만큼의 주석화 |
 | Ctrl + W | 가장 안쪽의 괄호부터 선택(점점 확장 된다.) |
@@ -63,8 +63,8 @@
 
 | Shortcut | Task |
 | -------- | ---- |
-| Alt + F7 / Ctrl + F7 | Find usages / Find usages in file |
-| Ctrl + Shift + F7 | Highlight usages in file |
+| Alt + F7 / Ctrl + F7 | 사용하는 곳 찾기 / 파일내 사용하는 곳 찾기 * |
+| Ctrl + Shift + F7 | 사용하는 곳 하이라이트 * |
 | Ctrl + Alt + F7 | Show usages |
 
 ### Compile and Run
@@ -92,6 +92,7 @@
 | F9 | Resume program |
 | Ctrl + F8 | Toggle breakpoint |
 | Ctrl + Shift + F8 | View breakpoints |
+| Ctrl + Shift + T | 테스트 코드로 이동 * |
 
 ### Navigation
 
@@ -105,29 +106,31 @@
 | Esc | Go to editor (from tool window) |
 | Shift + Esc | Hide active or last active window |
 | Ctrl + Shift + F4 | Close active run/messages/find/... tab |
-| Ctrl + G | Go to line |
+| Ctrl + G | 특정 줄로 이동 * |
 | Ctrl + E | Recent files popup |
-| Ctrl + Alt + Left/Right | Ctrl+마우스클릭으로 이동했던 페이지에서 원래의 파일로 돌아감. |
-| Ctrl + Shift + Backspace | 소스 편집 중 원래 편집하던 소스파일로 돌아감. |
-| Alt + F| Select current file or symbol in any view |
-| Ctrl + B / Ctrl + Click | Go to declaration |
-| Ctrl + Alt + B | Go to implementation(s) |
+| Ctrl + Alt + Left/Right | Ctrl+마우스클릭으로 이동했던 페이지에서 원래의 파일로 돌아감. * |
+| Alt + Left/Right | 이전 / 이후 탭으로 이동. * |
+| Ctrl + Shift + Backspace | 소스 편집 중 원래 편집하던 소스파일로 돌아감. * |
+| Alt + F1 | 지금 수정중인 소스파일의 위치를 보여줌 * |
+| Ctrl + B / Ctrl + Click | 선언체로 이동 * |
+| Ctrl + Alt + B | 구현체로 이동 * |
 | Ctrl + Shift + I | 해당 클래스로 가지 않아도 그 클래스안의 소스를 출력 |
 | Ctrl + Shift + B | Go to type declaration |
 | Ctrl + U | Go to super-method/super-class |
 | Alt + Up/Down | Go to previous/next method |
 | Ctrl + ] / [ | Move to code block end/start |
-| Ctrl + F12 | File structure popup |
+| Ctrl + F12 | 클래스 구조 * |
 | Ctrl + H | 타입 계층구조 |
 | Ctrl + Shift + H | 메소드 계층구조 |
 | Ctrl + Alt + H | Call hierarchy |
 | F2 / Shift + F2 | 이전/다음 에러 |
 | F4 / Ctrl + Enter | Edit source / View source |
-| Alt + Home | 지금 수정중인 소스파일의 위치를 보여줌 |
-| F1| Toggle bookmark |
-| Ctrl + F1| Toggle bookmark with mnemonic |
-| Ctrl + #[0-9] | Go to numbered bookmark |
-| Shift + F1| Show bookmarks |
+| Alt + Home | 네이게이션 보이기 |
+| F11 | 익명 북마크 토글 * |
+| Ctrl + F11 + @ | 번호 북마크 토글 * |
+| Ctrl + #[0-9] | 번호 북마크로 이동 * |
+| Shift + F11 | 북마크 보기 * |
+| Alt + 6 | Todo 보기 * |
 
 ### Refactoring
 
