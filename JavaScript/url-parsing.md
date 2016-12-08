@@ -1,6 +1,14 @@
 # URL Parsing
 
 ```javascript
+window.location.host // you'll get sub.domain.com:8080 or sub.domain.com:80
+window.location.hostname // you'll get sub.domain.com
+window.location.protocol // you'll get http:
+window.location.port // you'll get 8080 or 80
+window.location.pathname // you'll get /virtualPath
+```
+
+```javascript
 var parser = document.createElement('a');
 parser.href = "http://example.com:3000/pathname/?search=test#hash";
 
@@ -49,3 +57,4 @@ parseUri.options = {
 
 * [URI Parsing with Javascript](https://gist.github.com/jlong/2428561)
 * [parseUri 1.2: Split URLs in JavaScript](http://blog.stevenlevithan.com/archives/parseuri)
+* [stack overflow](http://stackoverflow.com/questions/1368264/how-to-extract-the-hostname-portion-of-a-url-in-javascript)
