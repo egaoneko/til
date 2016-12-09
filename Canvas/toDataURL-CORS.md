@@ -125,6 +125,41 @@ $(function() {
 <canvas id="s2-canvas"></canvas>
 ```
 
+```javascript
+function requestImage (url) {
+    var dfd = $q.defer();
+    var req = new XMLHttpRequest();
+    var img = new Image();
+
+    req.onload = function () {
+        img.onload = function () {
+            URL.revokeObjectURL(this.src);
+            dfd.resolve(img);
+            img.$resolved = true;
+        };
+
+        img.onerror = function () {
+            dfd.reject(img);
+        };
+
+        img.src = URL.createObjectURL(req.response);
+    };
+
+    req.onerror = function () {
+        dfd.reject(req);
+    };
+
+    req.open("get", url, true);
+    req.responseType = 'blob';
+    req.send();
+
+    img.src = url;
+    img.$promise = dfd.promise;
+    img.$resolved = false;
+    return img;
+}
+```
+
 ## Reference
 
 * [The canvas has been tainted by cross-origin data and tainted canvases may not be exported](http://ourcodeworld.com/articles/read/182/the-canvas-has-been-tainted-by-cross-origin-data-and-tainted-canvases-may-not-be-exported)
