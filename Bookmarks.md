@@ -11,6 +11,7 @@
 ### Guide
 * [CSS-Tricks](https://css-tricks.com/) : CSS 관련 트릭
 * [CSS 트랜지션 사용하기](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다.
+* [cssreference.io](http://cssreference.io/)
 
 ### Generator
 * [Layzilla](http://www.layzilla.com/) : CSS Layout 생성 (Full Screen)
@@ -81,6 +82,7 @@
 * [서버 성능에 대한 정의와 이해 - Sunny Kwak](http://www.slideshare.net/sunnykwak90/ss-44875669)
 * [안정적인 서비스 운영 - Changyol BAEK](http://www.slideshare.net/cybaek/201403)
 * [[Spring Cloud] 클라이언트 사이드 로드 밸런싱 (Client side Loadbalancing) 이란 ??](http://blog.leekyoungil.com/?p=259)
+* [나만 모르고 있던 – HTTP/2](http://www.popit.kr/%EB%82%98%EB%A7%8C-%EB%AA%A8%EB%A5%B4%EA%B3%A0-%EC%9E%88%EB%8D%98-http2/)
 
 ### Unit Test
 
@@ -120,3 +122,8 @@
 
 * [XMLHttpRequest Level 1](https://www.w3.org/TR/XMLHttpRequest/)
 * [XMLHttpRequest](https://xhr.spec.whatwg.org/)
+
+## Etc
+
+* [34살 살아보면서 느낀것들](https://brunch.co.kr/@andrewyhc/24)
+* [좋은 면접자/지원자가 되는 방법](https://repo.yona.io/doortts/blog/post/292)
