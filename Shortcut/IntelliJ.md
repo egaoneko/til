@@ -35,7 +35,7 @@
 | Ctrl + Shift + J | 스마트하게 코드를 한 줄로 합친다. |
 | Ctrl + Enter | 스마트하게 코드를 여러 줄로 나눈다. |
 | Shift + Enter | 커서가 어디에 있건 다음 라인을 생성하고 첫 줄로 이동  |
-| Ctrl + Shift + U | 커서가 있는 곳이나 블럭이 있는 곳을 대문자 및 소문자로 치환 |
+| Ctrl + Shift + U | 커서가 있는 곳이나 블럭이 있는 곳을 대문자 및 소문자로 치환 * |
 | Ctrl + Shift + ] / [ | 가장 가까운 괄호 시작/종료로 이동 |
 | Ctrl + Delete | 단어 삭제 (커서 시작부터) |
 | Ctrl + Backspace | Delete to word start |

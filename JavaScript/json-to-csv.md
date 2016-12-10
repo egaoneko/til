@@ -191,7 +191,7 @@ function ConvertToCSV (objArray, order, head) {
     for (var k = 0; k < order.length; k++) {
       var key = order[k];
       if (line != '') line += ',';
-      line += array[i][key];
+      line += array[i][key] !== undefined ? array[i][key] : '';;
     }
 
     str += line + '\r\n';

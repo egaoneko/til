@@ -198,7 +198,7 @@ foo();
 * Compiler : 코드 분석 후 실행 가능한 코드 생성
 * Scope (Scope Manager): 정의된 식별자 리스트업, 현재 실행중인 코드의 스코프 접근 제어
 
-* Compiler 가 코드를 분석하며 각 함수의 Scope에 변수를 생성(중복되지 않는다면), 그 후 Engine이 값을 할당해가며 실해됨
+* Compiler 가 코드를 분석하며 각 함수의 Scope에 변수를 생성(중복되지 않는다면), 그 후 Engine이 값을 할당해가며 실행됨
 * Compliation
 * LHS, RHS
 * Execution Phase
@@ -400,7 +400,7 @@ var baz2 = foo();
 console.log(baz1()); // 3, 변수 1, 함수 1
 console.log(baz2()); // 3, 변수 1, 함수 1
 // Closure는 Scope가 중요하다!
-// 변수 2, 함수 2 => 함수 2를 해결하기 위해서 prototype 사용
+// 변수 2개, 함수 2개 => 함수 2개를 해결하기 위해서 prototype 사용
 ```
 
 ```javascript
@@ -452,7 +452,7 @@ myModule.publicMethod(); // OK
 * ECMA의 객체 정의 "프로퍼티의 순서가 없는 컬렉션이며 각 프로퍼티는 원시값이나 객체, 함수를 포함한다.
 	* 키-값의 쌍으로 이루어진 일종의 해시 테이블
 	* 값 = 데이터 or 함수
-* 프로토타입을 이요해 프로퍼티의 중복 정의를 피할 수 있다.
+* 프로토타입을 이용해 프로퍼티의 중복 정의를 피할 수 있다.
 * es6부터 class 지원, 프로토타입 상속의 숏컷
 
 ## 객체 생성
@@ -505,7 +505,7 @@ delete obj; // obj = undefined
 todo.getContext(); // 메서드 getContex, this는 todo
 ```
 
-* 메서드가 정의될떄가 아닌 실행할때 결정
+* 메서드가 정의될때가 아닌 실행할때 결정
 * this = 메서드를 **실행할때** 연결된 객체
 
 ```javacript
@@ -515,7 +515,7 @@ nottodo.getContext(); // this는 nottodo
 
 ## 함수 안에서의 THIS
 
-* 메서드와 달리 실행할떄 연결된 객체가 없다
+* 메서드와 달리 실행할때 연결된 객체가 없다
 * window 객체의 메서드로 간주한다.
 * this = window
 * strict mode에서는 undefined
@@ -579,7 +579,7 @@ var person1 = createPerson("Person1");
 var person2 = createPerson("Person2");
 ```
 
-## BEW 연산자로 인한 내부 동작
+## NEW 연산자로 인한 내부 동작
 
 ```javascript
 var person = Person('Steve Job');
@@ -623,13 +623,9 @@ human instanceof Human // true
 function Person(firstName, lastName) {
 	this.firstName = firstName;
     this.lastName = lastName;
-}
-
-function PersonMethod() {
-	return {
-        getFullName : function () {
-        	return this.firstName + this.lastName;
-        }
+    
+    getFullName = function () {
+    	return this.firstName + this.lastName;
     }
 }
 ```
@@ -642,9 +638,13 @@ function Person(firstName, lastName) {
     this.lastName = lastName;
 }
 
-Person.prototype.getFullName = function () {
-    	return this.firstName + this.lastName;
+function PersonMethod() {
+	return {
+        getFullName : function () {
+        	return this.firstName + this.lastName;
+        }
     }
+}
 ```
 
 ## 프로토타입의 적용
@@ -655,10 +655,10 @@ Person.prototype.getFullName = function () {
 function Person(firstName, lastName) {
 	this.firstName = firstName;
     this.lastName = lastName;
-    
-    getFullName = function () {
+}
+
+Person.prototype.getFullName = function () {
     	return this.firstName + this.lastName;
-    }
 }
 ```
 
