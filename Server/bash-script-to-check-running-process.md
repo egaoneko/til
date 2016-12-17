@@ -7,8 +7,8 @@ SERVICE="$1"
 RESULT=`ps -a | sed -n /${SERVICE}/p`
 
 if [ "${RESULT:-null}" = null ]; then
-    echo "not running"
+    echo "Not running: $(date)" >> /var/log/log.txt
 else
-    echo "running"
+    echo "Running:  $(date)" >> /var/log/log.txt
 fi
 ```
