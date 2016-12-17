@@ -15,7 +15,21 @@
 nohup /usr/local/java/bin/java -jar XDreamyi3shop.jar &
 ```
 
+## Screen
+
+```bash
+$ yum install screen        //레드헷 기반
+$ apt-get install screen    //데비안, 우분투
+
+$ vi run.sh
+#!/bin/bash
+screen -d -m java -Xmx1G -Xms1G -jar minecraft_server.jar nogui
+
+$ ./run.sh
+$ screen -r
+```
+
 ## Reference
 
-* [
-리눅스 - 프로세스 백그라운드 실행](http://mustbegames.tistory.com/18)
+* [리눅스 - 프로세스 백그라운드 실행](http://mustbegames.tistory.com/18)
+* [마인크래프트 서버를 리눅스에서 백그라운드로 실행하기](http://coearth.tistory.com/9)
