@@ -128,3 +128,6 @@
 
 * [34살 살아보면서 느낀것들](https://brunch.co.kr/@andrewyhc/24)
 * [좋은 면접자/지원자가 되는 방법](https://repo.yona.io/doortts/blog/post/292)
+* [일하면서 자기 계발하는 8가지 방법](https://brunch.co.kr/@annachoi/33)
+* [누구와 함께 시간을 보내는가?](https://brunch.co.kr/@imagineer/195)
+* [JetBrains 회사 제품의 라이센스](https://perfectacle.github.io/2016/12/18/JetBrains-License/)
