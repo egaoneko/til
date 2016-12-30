@@ -6,9 +6,11 @@
 * [누구나 쉽게 이해할 수 있는 Git입문](http://backlogtool.com/git-guide/kr/) : Git 사용법 설명
 * [Git, 가장 쉽게 사용하기](http://tmondev.blog.me/220759303637) : Git 사용법 설명
 
-## CSS
+## HTML/CSS
 
 ### Guide
+* [codrops](http://tympanus.net/codrops/) : HTML/CSS 관련 공부 [HTML5 CSS 를 제대로 공부하고 싶은 학생, 조언이 필요합니다!](http://qna.iamprogrammer.io/t/html5-css/685)
+* [codrops](http://www.hongkiat.com/blog/) : HTML/CSS 관련 공부 [HTML5 CSS 를 제대로 공부하고 싶은 학생, 조언이 필요합니다!](http://qna.iamprogrammer.io/t/html5-css/685)
 * [CSS-Tricks](https://css-tricks.com/) : CSS 관련 트릭
 * [CSS 트랜지션 사용하기](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다.
 * [cssreference.io](http://cssreference.io/)
@@ -36,6 +38,11 @@
 #### Performance
 
 * [Optimizing JavaScript code - Google](https://developers.google.com/speed/articles/optimizing-javascript)
+
+#### Etc
+
+* [네이버 지도 JavaScript API 완벽 가이드 – 오버레이 편](http://d2.naver.com/helloworld/3380225)
+* [네이버 지도 JavaScript API 완벽 가이드 – 투영, 지도 유형 편](http://d2.naver.com/helloworld/9121395)
 
 ### Node.js
 
@@ -131,3 +138,5 @@
 * [일하면서 자기 계발하는 8가지 방법](https://brunch.co.kr/@annachoi/33)
 * [누구와 함께 시간을 보내는가?](https://brunch.co.kr/@imagineer/195)
 * [JetBrains 회사 제품의 라이센스](https://perfectacle.github.io/2016/12/18/JetBrains-License/)
+* [블로그 주도 개발](http://www.slideshare.net/rockdoli/ss-48806118)
+* [나의 회사생활 이야기 — 스위처 iOS 개발자](https://medium.com/@trilliwon/%EB%82%98%EC%9D%98-%ED%9A%8C%EC%82%AC%EC%83%9D%ED%99%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0-%EC%8A%A4%EC%9C%84%EC%B2%98-ios-%EA%B0%9C%EB%B0%9C%EC%9E%90-48cf992afca3#.p0byhwd29)
