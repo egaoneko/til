@@ -2,6 +2,8 @@
 
 ## IntelliJ
 
+* [인텔리J 활용 꿀팁 42가지 정리](http://www.popit.kr/%EC%9D%B8%ED%85%94%EB%A6%ACj-%ED%99%9C%EC%9A%A9-%EA%BF%80%ED%8C%81-42%EA%B0%80%EC%A7%80-%EC%A0%95%EB%A6%AC/)
+
 ### Plugins
 
 * [Save Actions](https://plugins.jetbrains.com/plugin/7642)
