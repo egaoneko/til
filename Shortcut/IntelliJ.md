@@ -102,8 +102,8 @@
 | Ctrl + Shift + N | 파일(layout xml 등) 찾기 |
 | Ctrl + Alt + Shift + N | 심벌(메서드, 상수, enum 등) 찾기 |
 | Alt + Right/Left | Go to next/previous editor tab |
-| F12 | 파일 구조 |
-| Esc | Go to editor (from tool window) |
+| F12 | 파일 구조 * |
+| Esc | 작업 윈도우에서 에디터로 포커스 이동 * |
 | Shift + Esc | Hide active or last active window |
 | Ctrl + Shift + F4 | Close active run/messages/find/... tab |
 | Ctrl + G | 특정 줄로 이동 * |
