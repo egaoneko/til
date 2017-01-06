@@ -176,7 +176,8 @@
 
 | Shortcut | Task |
 | -------- | ---- |
-| Alt + #[0-9] | Open corresponding tool window |
+| Alt + #[0-9] | 해당하는 작업 윈도우 토글 |
+| Ctrl + Shift + 방향키 | 작업 윈도우 선택 후 창 사이즈 변경 |
 | Ctrl + S | Save all |
 | Ctrl + Alt + Y | Synchronize |
 | Ctrl + Shift + F12 | Toggle maximizing editor |
@@ -185,8 +186,8 @@
 | Ctrl + BackQuote (`) | Quick switch current scheme |
 | Ctrl + Alt + S | Open Settings dialog |
 | Ctrl + Alt + Shift + S | Open Project Structure dialog |
-| Ctrl + Shift + A | Find Action |
-| Ctrl + Tab | Switch between tabs and tool window |
+| Ctrl + Shift + A | 액션 검색 * |
+| Ctrl + Tab | 탭이나 작업 윈도우간 전환 * |
 
 ### ETC
 | Windows | Mac | Task |
