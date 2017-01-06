@@ -83,6 +83,8 @@
 * [FEDevelopers/tech.description](https://github.com/FEDevelopers/tech.description/wiki/%EB%B2%88%EC%97%AD-%EB%AC%B8%EC%84%9C)
 * [Gulp.js로 빌드 작업 관리하기](https://code.tutsplus.com/ko/tutorials/managing-your-build-tasks-with-gulpjs--net-36910?utm_medium=social&utm_source=facebook&utm_campaign=fb_webfrontend)
 * [웹 접근성](http://nuli.navercorp.com/sharing/a11y)
+* [webpack 실전 가이드](https://hyunseob.github.io/2016/04/03/webpack-practical-guide/)
+* [gulp vs. Grunt vs. Webpack](https://stackshare.io/stackups/gulp-vs-grunt-vs-webpack)
 
 ### Server
 
