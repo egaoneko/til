@@ -85,6 +85,7 @@
 * [웹 접근성](http://nuli.navercorp.com/sharing/a11y)
 * [webpack 실전 가이드](https://hyunseob.github.io/2016/04/03/webpack-practical-guide/)
 * [gulp vs. Grunt vs. Webpack](https://stackshare.io/stackups/gulp-vs-grunt-vs-webpack)
+* [웹에서 SVG 사용하기-실습 가이드](https://svgontheweb.com/ko/)
 
 ### Server
 
@@ -108,6 +109,7 @@
 * [http://exercism.io/](http://exercism.io/) : 언어별 다양한 문제 제공
 * [Currying 어따 써먹냐구요?](https://www.facebook.com/notes/kevin-lee/currying-%EC%96%B4%EB%94%B0-%EC%8D%A8%EB%A8%B9%EB%83%90%EA%B5%AC%EC%9A%94/214522735556858?hc_location=ufi)
 * [람다, 익명 함수, 클로저](https://hyunseob.github.io/2016/09/17/lambda-anonymous-function-closure/)
+* [리액티브 개발 패러다임에 담긴 메시지](http://www.zdnet.co.kr/column/column_view.asp?artice_id=20161010104628)
 
 ## DB
 
