@@ -33,3 +33,7 @@
 ## App Player
 
 * [NOX](https://www.bignox.com/kr#p1)
+
+## Package Manager
+
+* [Chocolatey](https://chocolatey.org/)
