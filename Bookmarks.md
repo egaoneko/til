@@ -14,6 +14,7 @@
 * [CSS-Tricks](https://css-tricks.com/) : CSS 관련 트릭
 * [CSS 트랜지션 사용하기](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다.
 * [cssreference.io](http://cssreference.io/)
+* [SASS 강좌 – 한 눈에 보기](https://velopert.com/1712)
 
 ### Generator
 * [Layzilla](http://www.layzilla.com/) : CSS Layout 생성 (Full Screen)
