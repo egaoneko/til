@@ -37,3 +37,8 @@
 ## Package Manager
 
 * [Chocolatey](https://chocolatey.org/)
+
+## VIM
+
+* [Vim Bootstrap](http://www.vim-bootstrap.com/) : 선택한 언어에 맞는 `.vimrc` 생성
+* [Vim 에디터에 대해 알아보자 - 6 (창 분할, 탭 사용)](http://jangpd007.tistory.com/13)
