@@ -46,6 +46,8 @@
 
 * [네이버 지도 JavaScript API 완벽 가이드 – 오버레이 편](http://d2.naver.com/helloworld/3380225)
 * [네이버 지도 JavaScript API 완벽 가이드 – 투영, 지도 유형 편](http://d2.naver.com/helloworld/9121395)
+* [구글 크롬 브라우저의 확장 프로그램 만들기](http://hodol.kr/xe/note/17558)
+* [구글 확장 프로그램 API 설명서](https://developer.chrome.com/extensions/api_index)
 
 ### Node.js
 
