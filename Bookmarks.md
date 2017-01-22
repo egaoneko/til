@@ -37,6 +37,10 @@
 * [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) : Javascript design pattern
 * [ECMAScript 5](https://opentutorials.org/course/787/5111)
 * [ECMAScript 6— New Features: Overview & Comparison](http://es6-features.org/#BlockScopedFunctions)
+* [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#modules)
+* [ES6시대의 JavaScript](https://gist.github.com/marocchino/841e2ff62f59f420f9d9)
+* [ES6 In Depth: 모듈](http://hacks.mozilla.or.kr/2016/05/es6-in-depth-modules/)
+* [ES6: Modules (import & export)](http://ohgyun.com/588)
 
 #### Performance
 
