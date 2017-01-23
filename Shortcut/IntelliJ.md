@@ -188,6 +188,7 @@
 | Ctrl + Alt + Shift + S | Open Project Structure dialog |
 | Ctrl + Shift + A | 액션 검색 * |
 | Ctrl + Tab | 탭이나 작업 윈도우간 전환 * |
+| Ctrl + Alt + N | 새 파일 만들기 * |
 
 ### ETC
 | Windows | Mac | Task |
