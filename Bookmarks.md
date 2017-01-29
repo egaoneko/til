@@ -65,6 +65,7 @@
 
 * [Mocha로 JavaScript 테스팅 시작하기](http://programmingsummaries.tistory.com/383)
 * [mocha : node.js 테스트 프레임워크](https://blog.outsider.ne.kr/770)
+* [Unit testing Ajax requests with Mocha](https://www.airpair.com/javascript/posts/unit-testing-ajax-requests-with-mocha)
 
 #### Etc
 
