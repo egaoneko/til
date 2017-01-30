@@ -52,6 +52,7 @@
 * [네이버 지도 JavaScript API 완벽 가이드 – 투영, 지도 유형 편](http://d2.naver.com/helloworld/9121395)
 * [구글 크롬 브라우저의 확장 프로그램 만들기](http://hodol.kr/xe/note/17558)
 * [구글 확장 프로그램 API 설명서](https://developer.chrome.com/extensions/api_index)
+* [자바스크립트 코딩 면접에서 알고 있어야 할 3가지 질문](https://joshua1988.github.io/web_dev/javascript-interview-3questions/)
 
 ### Node.js
 
