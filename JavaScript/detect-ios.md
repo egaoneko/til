@@ -46,3 +46,9 @@ function iOSversion() {
   return 'Not an iOS device';
 }
 ```
+
+```javascript
+window.navigator.userAgent.match(/OS ((\d+_?){2,3})\s/);
+```
+
+* [stack overflow](http://stackoverflow.com/questions/11171895/detecting-ios-version-number-from-user-agent-using-regular-expressions)
