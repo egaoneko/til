@@ -48,6 +48,10 @@ If you decide to uninstall the root certificate:
 4. Tap the `DO_NOT_TRUST_FiddlerRoot*` profile.
 5. Tap `Remove`.
 
+## File Proxy
+
+* AutoResponder 변경할 주소와 파일을 추가한다.
+
 ## Reference
 
 * [Capture Traffic from iOS Device](http://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/ConfigureForiOS)
