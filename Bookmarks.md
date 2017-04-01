@@ -169,6 +169,13 @@
 * [simpleprogrammer](https://simpleprogrammer.com/)
 * [safaribooks](https://www.safaribooksonline.com/)
 
+## Online Judge
+
+* [LeetCode](https://leetcode.com/)
+* [Hacker Rank](https://www.hackerrank.com/)
+* [algospot](https://algospot.com/)
+* [Baekjoon](https://www.acmicpc.net/)
+
 ## Etc
 
 * [34살 살아보면서 느낀것들](https://brunch.co.kr/@andrewyhc/24)
