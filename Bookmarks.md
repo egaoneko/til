@@ -5,6 +5,7 @@
 ### Guide
 * [누구나 쉽게 이해할 수 있는 Git입문](http://backlogtool.com/git-guide/kr/) : Git 사용법 설명
 * [Git, 가장 쉽게 사용하기](http://tmondev.blog.me/220759303637) : Git 사용법 설명
+* [Git-ing out of your git messes](https://www.slideshare.net/KatrinaSylorMiller/giting-out-of-your-git-messes) : Git에 대해 잘 설명되어 있는 슬라이드
 
 ## HTML/CSS
 
@@ -15,6 +16,8 @@
 * [CSS 트랜지션 사용하기](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다.
 * [cssreference.io](http://cssreference.io/)
 * [SASS 강좌 – 한 눈에 보기](https://velopert.com/1712)
+
+* [HTML -MDN](https://developer.mozilla.org/ko/docs/Learn/HTML)
 
 ### Generator
 * [Layzilla](http://www.layzilla.com/) : CSS Layout 생성 (Full Screen)
@@ -106,6 +109,7 @@
 * [Gulp.js로 빌드 작업 관리하기](https://code.tutsplus.com/ko/tutorials/managing-your-build-tasks-with-gulpjs--net-36910?utm_medium=social&utm_source=facebook&utm_campaign=fb_webfrontend)
 * [웹 접근성](http://nuli.navercorp.com/sharing/a11y)
 * [webpack 실전 가이드](https://hyunseob.github.io/2016/04/03/webpack-practical-guide/)
+* [webpack2 입문 가이드](https://hyunseob.github.io/2017/03/21/webpack2-beginners-guide/)
 * [gulp vs. Grunt vs. Webpack](https://stackshare.io/stackups/gulp-vs-grunt-vs-webpack)
 * [웹에서 SVG 사용하기-실습 가이드](https://svgontheweb.com/ko/)
 
@@ -164,6 +168,13 @@
 * [인프런](https://www.inflearn.com/)
 * [simpleprogrammer](https://simpleprogrammer.com/)
 * [safaribooks](https://www.safaribooksonline.com/)
+
+## Online Judge
+
+* [LeetCode](https://leetcode.com/)
+* [Hacker Rank](https://www.hackerrank.com/)
+* [algospot](https://algospot.com/)
+* [Baekjoon](https://www.acmicpc.net/)
 
 ## Etc
 
