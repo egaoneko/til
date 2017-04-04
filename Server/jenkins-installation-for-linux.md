@@ -90,7 +90,7 @@ Github를 통해 소스를 Deploy하기 위해 Github에 있는 ``Respository UR
 
 ### Freestyle project로 생성하는 경우에 Maven build 설정 (새로운 Item > Item 이름 입력 > Freestyle project)
 
-![freestyle-maven](../img/Server/jenkins-installation-for-linux/freestyle-maven.png)
+![freestyle-maven](../img/Server/jenkins-installation-for-linux/freestyle-maven.PNG)
 
 Freestyle project로 생성해서 Maven을 사용하여 build해야 되는 경우에는 ``Add build step``으로 ``Invoke top-level Maven targets``을 추가하고 ``Maven Version``과 ``Goals``을 설정해준다.
 

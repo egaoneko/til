@@ -39,3 +39,17 @@ window.onbeforeunload = function(e) {
 * Note also, that various mobile browsers ignore the result of the event (that is, they do not ask the user for confirmation).
 
 대부분의 모바일 브라우저는 해당 이벤트를 무시한다.
+
+## Addition
+
+`IE`에서는 `window.onbeforeunload`가, `Chrome`에서는 `window.addEventListener`가 동작하지 않는 문제가 발생하였다.
+
+```javascript
+window.addEventListener('beforeunload', beforeunload);
+window.onbeforeunload = beforeunload;
+
+function beforeunload () {
+    return "message";
+}
+```
+위와 같이 두 방법을 전부 등록하면 정상동작한다.
