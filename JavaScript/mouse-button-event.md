@@ -16,22 +16,22 @@ console.log(MouseEvent.button, MouseEvent.buttons)
 
 The button number that was pressed when the mouse event was fired.
 
-`0`: Main button pressed, usually the left button or the un-initialized state
-`1`: Auxiliary button pressed, usually the wheel button or the middle button (if present)
-`2`: Secondary button pressed, usually the right button
-`3`: Fourth button, typically the Browser Back button
-`4`: Fifth button, typically the Browser Forward button
+>`0`: Main button pressed, usually the left button or the un-initialized state
+>`1`: Auxiliary button pressed, usually the wheel button or the middle button (if present)
+>`2`: Secondary button pressed, usually the right button
+>`3`: Fourth button, typically the Browser Back button
+>`4`: Fifth button, typically the Browser Forward button
 
 * [MouseEvent.buttons](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/buttons)
 
 The buttons being pressed when the mouse event was fired. Each button that can be pressed is represented by a given number (see below). If more than one button is pressed, the value of the buttons is combined to produce a new number.
 
-`0`: No button or un-initialized
-`1`: Left button
-`2`: Right button
-`4`: Wheel button or middle button
-`8`: 4th button (typically the "Browser Back" button)
-`16`: 5th button (typically the "Browser Forward" button)
+>`0`: No button or un-initialized
+>`1`: Left button
+>`2`: Right button
+>`4`: Wheel button or middle button
+>`8`: 4th button (typically the "Browser Back" button)
+>`16`: 5th button (typically the "Browser Forward" button)
 
 해당 이벤트를 찾아봤을 때 MDN에서는 상단과 같이 설명하고 있다.
 
