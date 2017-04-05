@@ -75,6 +75,13 @@
 
 * [Sinon.js](http://sinonjs.org/) : Standalone test spies, stubs and mocks for JavaScript.
 
+## Java
+
+### Etc
+
+* [Java SE 8 Archive Downloads](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+* [Java SE 7 Archive Downloads](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html)
+
 ## WebGL
 
 ### Guide
