@@ -10,7 +10,6 @@
 ## HTML/CSS
 
 ### Guide
-* [codrops](http://tympanus.net/codrops/) : HTML/CSS 관련 공부 [HTML5 CSS 를 제대로 공부하고 싶은 학생, 조언이 필요합니다!](http://qna.iamprogrammer.io/t/html5-css/685)
 * [codrops](http://www.hongkiat.com/blog/) : HTML/CSS 관련 공부 [HTML5 CSS 를 제대로 공부하고 싶은 학생, 조언이 필요합니다!](http://qna.iamprogrammer.io/t/html5-css/685)
 * [CSS-Tricks](https://css-tricks.com/) : CSS 관련 트릭
 * [CSS 트랜지션 사용하기](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다.
