@@ -8,7 +8,7 @@
 console.log(MouseEvent.button, MouseEvent.buttons)
 ```
 
-상단과 같이 `MouseEvent`의 `button`과 `buttons`를 출력하고 마우스 클릭을 하면 크롬의 경우 `button`의 값이 해당 클릭하는 버튼의 값을 출력하지만 IE의 경우 `button`의 값이 버튼 클릭과 관계없이 0으로 계속 동일하게 출력되었다. `buttons`의 경우 현재 누른 값아 반환되었다.
+상단과 같이 `MouseEvent`의 `button`과 `buttons`를 출력하고 마우스 클릭을 하면 크롬의 경우 `button`의 값이 해당 클릭하는 버튼의 값을 출력하지만 IE의 경우 `button`의 값이 버튼 클릭과 관계없이 0으로 계속 동일하게 출력되었다. `buttons`의 경우 현재 누른 값 반환되었다.
 
 ## Solution
 
