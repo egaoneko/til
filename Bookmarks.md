@@ -88,6 +88,10 @@
 * [Getting started with WebGL](https://developer.mozilla.org/ko/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL) : WebGL 튜토리얼
 * [Intro to WebGL with Three.js](http://davidscottlyons.com/threejs/presentations/frontporch14/#slide-0) : three.js로 배우는 WebGL 튜토리얼
 
+### Etc
+
+* [WebGL MAX parameters support](http://alteredqualia.com/tmp/webgl-maxparams-test/) : WebGL support check
+
 ## Tools
 
 ### Web
