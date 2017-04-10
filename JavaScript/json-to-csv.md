@@ -72,11 +72,76 @@ document.body.appendChild(link); // Required for FF
 link.click(); // This will download the data file named "my_data.csv".
 ```
 
-## Korean Encoding
+## Korean Encoding 1
 
 ```javascript
 var uri = 'data:text/csv;charset=UTF-8,\uFEFF' + encodeURI(CSV);
 ```
+
+## Korean Encoding 2
+
+```javascript
+download("/export", {
+    data: window.btoa(unescape(encodeURIComponent(csvContent))),
+    extension: "csv",
+    filename: "test"
+}, "POST");
+
+// var req = {
+// 	method: 'POST',
+// 	headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+// 	url: '/export',
+// 	data: $.param({data: window.btoa(unescape(encodeURIComponent(csvContent))), extension: "csv", filename: "test"})
+// };
+// $http(req);
+```
+
+```xml
+<META HTTP-EQUIVE="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=KSC5601">
+<%@page language="java" trimDirectiveWhitespaces="true" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" %>
+<%@ page import="java.io.ByteArrayOutputStream" %>
+<%@ page import="java.net.URLDecoder" %>
+<%@ page import="org.apache.commons.codec.binary.Base64" %>
+<%
+
+    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+    String data = request.getParameter("data"); // 파라메터 data
+    String extension = request.getParameter("extension"); // 파라메터 확장자
+    String fileName = request.getParameter("filename"); // 파라메터 파일명
+    fileName = URLDecoder.decode(fileName);
+    fileName = java.net.URLEncoder.encode(fileName, "UTF-8").replace("+", "%20").replace("%5B", "[").replace("%5D", "]").replace("%3A", ":").replace(
+            "%28", "(").replace("%29", ")");
+
+    byte[] dataByte = Base64.decodeBase64(data.getBytes()); // 데이터 base64 디코딩
+
+    // csv 를 엑셀에서 열기 위해서는 euc-kr 로 작성해야 함.
+    if (extension.equals("csv")) {
+        String sting = new String(dataByte, "utf-8");
+        outputStream.write(sting.getBytes("euc-kr"));
+    } else {
+        outputStream.write(dataByte);
+    }
+
+    String filename = fileName + "." + extension; // 다운로드 될 파일명
+
+    response.reset();
+    response.setContentType("application/octet-stream");
+    response.setHeader("Content-Disposition", "attachment; filename=" + filename);
+    response.setHeader("Content-Length", String.valueOf(outputStream.size()));
+
+    out.clear();
+    pageContext.pushBody();
+    ServletOutputStream sos = response.getOutputStream();
+    sos.write(outputStream.toByteArray());
+    sos.flush();
+    sos.close();
+%>
+```
+
+* [base64 encoding decoding](./base64-encoding-decoding.md)
+* [Download file using Ajax](./download-file-using-ajax.md)
 
 ## Large Json
 
