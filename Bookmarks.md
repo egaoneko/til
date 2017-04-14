@@ -131,6 +131,7 @@
 * [안정적인 서비스 운영 - Changyol BAEK](http://www.slideshare.net/cybaek/201403)
 * [[Spring Cloud] 클라이언트 사이드 로드 밸런싱 (Client side Loadbalancing) 이란 ??](http://blog.leekyoungil.com/?p=259)
 * [나만 모르고 있던 – HTTP/2](http://www.popit.kr/%EB%82%98%EB%A7%8C-%EB%AA%A8%EB%A5%B4%EA%B3%A0-%EC%9E%88%EB%8D%98-http2/)
+* [httpd 명령어](https://httpd.apache.org/docs/current/ko/programs/httpd.html)
 
 ### Unit Test
 
