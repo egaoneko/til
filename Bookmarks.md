@@ -43,6 +43,7 @@
 * [ES6시대의 JavaScript](https://gist.github.com/marocchino/841e2ff62f59f420f9d9)
 * [ES6 In Depth: 모듈](http://hacks.mozilla.or.kr/2016/05/es6-in-depth-modules/)
 * [ES6: Modules (import & export)](http://ohgyun.com/588)
+* [bsidesoft post](http://www.bsidesoft.com/) : bsidesoft post
 
 #### Performance
 
