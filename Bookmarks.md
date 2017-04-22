@@ -10,7 +10,6 @@
 ## HTML/CSS
 
 ### Guide
-* [codrops](http://tympanus.net/codrops/) : HTML/CSS 관련 공부 [HTML5 CSS 를 제대로 공부하고 싶은 학생, 조언이 필요합니다!](http://qna.iamprogrammer.io/t/html5-css/685)
 * [codrops](http://www.hongkiat.com/blog/) : HTML/CSS 관련 공부 [HTML5 CSS 를 제대로 공부하고 싶은 학생, 조언이 필요합니다!](http://qna.iamprogrammer.io/t/html5-css/685)
 * [CSS-Tricks](https://css-tricks.com/) : CSS 관련 트릭
 * [CSS 트랜지션 사용하기](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공한다.
@@ -44,6 +43,7 @@
 * [ES6시대의 JavaScript](https://gist.github.com/marocchino/841e2ff62f59f420f9d9)
 * [ES6 In Depth: 모듈](http://hacks.mozilla.or.kr/2016/05/es6-in-depth-modules/)
 * [ES6: Modules (import & export)](http://ohgyun.com/588)
+* [bsidesoft post](http://www.bsidesoft.com/) : bsidesoft post
 
 #### Performance
 
@@ -88,6 +88,13 @@
 
 * [Getting started with WebGL](https://developer.mozilla.org/ko/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL) : WebGL 튜토리얼
 * [Intro to WebGL with Three.js](http://davidscottlyons.com/threejs/presentations/frontporch14/#slide-0) : three.js로 배우는 WebGL 튜토리얼
+* [WebGL Samples](http://webglsamples.org): WebGL Samples
+* [Three.js Thumbnails](http://www.realtimerendering.com/threejs/) : Thumbnails for three.js examples
+* [Three.js Samples](http://stemkoski.github.io/Three.js/): Three.js samples
+
+### Etc
+
+* [WebGL MAX parameters support](http://alteredqualia.com/tmp/webgl-maxparams-test/) : WebGL support check
 
 ## Tools
 
@@ -127,6 +134,7 @@
 * [안정적인 서비스 운영 - Changyol BAEK](http://www.slideshare.net/cybaek/201403)
 * [[Spring Cloud] 클라이언트 사이드 로드 밸런싱 (Client side Loadbalancing) 이란 ??](http://blog.leekyoungil.com/?p=259)
 * [나만 모르고 있던 – HTTP/2](http://www.popit.kr/%EB%82%98%EB%A7%8C-%EB%AA%A8%EB%A5%B4%EA%B3%A0-%EC%9E%88%EB%8D%98-http2/)
+* [httpd 명령어](https://httpd.apache.org/docs/current/ko/programs/httpd.html)
 
 ### Unit Test
 
