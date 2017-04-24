@@ -46,3 +46,7 @@
 ## Tester
 
 * [IETester](http://www.my-debugbar.com/wiki/IETester/HomePage) : IE 버전별 테스트를 지원하는 도구
+
+## Installer
+
+* [NSIS](http://nsis.sourceforge.net/Download) : exe 인스톨러
