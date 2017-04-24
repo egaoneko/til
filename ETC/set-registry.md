@@ -19,6 +19,7 @@ if exist %windir%\SysWOW64 (
 # define installer name
 Name "Seat WebGL Installer"
 OutFile "seat_webgl_installer.exe"
+RequestExecutionLevel admin ;Require admin rights on NT6+ (When UAC is turned on)
  
 # set desktop as install directory
 InstallDir $DESKTOP
@@ -29,23 +30,19 @@ Section
 # Write registry
 ClearErrors
 SetRegView 64
-ReadRegStr $0 HKLM "SOFTWARE\Wow6432Node\<APP>" "<Reg>"
+ReadRegStr $0 HKLM "SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\MAIN" "EnableWebGLPerformanceMonitor"
 SetRegView 32
-ReadRegStr $0 HKLM "SOFTWARE\<APP>" "<Reg>"
+ReadRegStr $0 HKLM "SOFTWARE\Microsoft\Internet Explorer\MAIN" "EnableWebGLPerformanceMonitor"
 
-${If} ${Errors}
-	MessageBox MB_OK "오류가 발생했습니다."
-${Else}
-	${IF} $0 == 0
-		MESSAGEBOX MB_OK "이미 설치되어 있습니다."
-        ${ELSE}
-		SetRegView 64
-		WriteRegDWORD HKLM "SOFTWARE\Wow6432Node\<APP>" "<Reg>" 0
-		SetRegView 32
-		WriteRegStr HKLM "SOFTWARE\<APP>" "<Reg>" 0
-		MESSAGEBOX MB_OK "설치되었습니다."
-	${ENDIF}
-${EndIf}
+${IF} $0 == 0
+	MESSAGEBOX MB_OK "이미 설치되어 있습니다."
+${ELSE}
+	SetRegView 64
+	WriteRegDWORD HKLM "SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\MAIN" "EnableWebGLPerformanceMonitor" 0
+	SetRegView 32
+	WriteRegStr HKLM "SOFTWARE\Microsoft\Internet Explorer\MAIN" "EnableWebGLPerformanceMonitor" 0
+	MESSAGEBOX MB_OK "설치되었습니다."
+${ENDIF}
 
 # define uninstaller name
 WriteUninstaller $INSTDIR\seat_webgl_uninstaller.exe
