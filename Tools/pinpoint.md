@@ -1,9 +1,9 @@
 # Pinpoint 를 이용한 성능진단
 
 * APM(Application Performance Management) : 장애 검증
- * Pinpoint
- * Scouter
- * glowroot
+  * Pinpoint
+  * Scouter
+  * glowroot
 * Profiling Tool : 튜닝을 위한 것, CPU, Memory, Coverage
  * Your Kit
  * JProfiler
@@ -20,15 +20,15 @@
 * git clone https://github.com/naver/pinpoint.git
 * git checkout 1.6.x
 * mvn install -Dmaven.test.skip=true
- * java home이 잘 설정되어있지 않으면 오류 (6, 7, 8)
+  * java home이 잘 설정되어있지 않으면 오류 (6, 7, 8)
 * brew install unix2dos # Mac 만 해당
- * cd pinpoint/quickstart
- * dos2unix bin/*.sh
- * dos2unix conf/*
+  * cd pinpoint/quickstart
+  * dos2unix bin/*.sh
+  * dos2unix conf/*
 * bin/start-hbase.sh # In pinpoint/quickstart
 * bin/init-hbase.sh
 * bin/start-collector.sh
- * tail -f logs/quickstart.collector.log
+  * tail -f logs/quickstart.collector.log
 * bin/start-testapp.sh
 * bin/start-web.sh
 
@@ -44,13 +44,13 @@
 -classpath /usr/local/Cellar/maven/3.3.9/libexec/boot/plexus-classworlds-2.5.2.jar -Dclassworlds.conf=/usr/local/Cellar/maven/3.3.9/libexec/bin/m2.conf -Dmaven.home=/usr/local/Cellar/maven/3.3.9/libexec -Dmaven.multiModuleProjectDirectory=/Users/donghyun/Workspace/pinpoint/pinpoint/quickstart org.codehaus.plexus.classworlds.launcher.Launcher -f /Users/donghyun/Workspace/pinpoint/pinpoint/quickstart/testapp/pom.xml clean package tomcat7:run -Dmaven.pinpoint.identifier=pinpoint-quickstart-testapp -Dmaven.pinpoint.version=1.6.1
 ```
 * BCI(Byto Code Instrumentation)
- * ASM
- * BCEL
- * Javassist
+  * ASM
+  * BCEL
+  * Javassist
 * Dapper
 
 ## 설정
 
 * conf/pinpoint.config
- * collector 설정
- * 프로파일러 설정
+  * collector 설정
+  * 프로파일러 설정
