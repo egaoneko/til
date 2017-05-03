@@ -169,6 +169,7 @@
 * [3D 게임 프로그래밍을 위한 기초 수학 - 4. 벡터의 내적](http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_Lecture_series&no=125)
 * [벡터와 외적](http://j1w2k3.tistory.com/635)
 * [AABB 와 삼각형 충돌 (Intersecting AABB and triangle)](http://mycom333.blogspot.kr/2014/01/aabb-intersecting-aabb-and-triangle.html)
+* [Seeing Theory](http://students.brown.edu/seeing-theory/) : 통계학 이론의 시각화
 
 ## Specification
 
