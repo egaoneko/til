@@ -50,3 +50,7 @@
 ## Installer
 
 * [NSIS](http://nsis.sourceforge.net/Download) : exe 인스톨러
+
+## Launcher
+
+* [Wox](http://www.getwox.com/) : Alfred와 같은 ㅉindows 용launcher
