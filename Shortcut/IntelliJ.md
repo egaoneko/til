@@ -125,12 +125,13 @@
 | Ctrl + Alt + H | Call hierarchy |
 | F2 / Shift + F2 | 이전/다음 에러 |
 | F4 / Ctrl + Enter | Edit source / View source |
-| Alt + Home | 네이게이션 보이기 |
+| Alt + Home | 네이게이션 보이기 * |
 | F11 | 익명 북마크 토글 * |
 | Ctrl + F11 + @ | 번호 북마크 토글 * |
 | Ctrl + #[0-9] | 번호 북마크로 이동 * |
 | Shift + F11 | 북마크 보기 * |
 | Alt + 6 | Todo 보기 * |
+| Alt + F12 | 터미널 토글 * |
 
 ### Refactoring
 
