@@ -1,9 +1,10 @@
-# iframe communication between window
+# other window communication between window
 
-## iframe window
+## other window window
 
 ```javascript
-iframeElement.contentWindow;
+iframeElement.contentWindow; // in iframe
+popup = window.open(); // in popup
 ```
 
 ## parent window
@@ -11,6 +12,7 @@ iframeElement.contentWindow;
 ```javascript
 iframeElement.contentWindow.parent;
 window.parent; // in iframe
+window.opener; // in popup
 ```
 
 ## postMessage
@@ -19,6 +21,16 @@ window.parent; // in iframe
 
 ```javascript
 otherWindow.postMessage(message, targetOrigin, [transfer]);
+```
+
+#### Tips
+
+`popup`이 `load`되기전에 메시지를 보내면, `popup`내의 `window`에 이벤트가 등록되기전에 메시지를 보내기 때문에 메시지를 받을 수 없다.
+
+```javascript
+popup.addEventListener('load', function () {
+    popup.postMessage("message", "*");
+});
 ```
 
 ### 수신
