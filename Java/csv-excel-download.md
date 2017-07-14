@@ -80,3 +80,13 @@ form.appendTo('body').submit();
 ```
 
 * Unicode base64 encoding은 [base64 encoding decoding](../javascript/base64-encoding-decoding.md) 를 참조
+
+## Tips
+
+```
+sylk 파일임을 확인했지만 로드할 수 없습니다.
+```
+
+CSV 파일로 저장할때 위와 같은 경고를 볼 수 있는데, 이 경우는 첫번째 컬럼에 ID라는 문자가 있어서 발생한다. 제거하면 정상 작동한다.
+
+* [SYLK 파일 형식이 잘못되었을 경우 해결방법](https://m.blog.naver.com/PostView.nhn?blogId=okydoky0&logNo=10147259406&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
