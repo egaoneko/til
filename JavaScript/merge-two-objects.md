@@ -33,7 +33,53 @@ Prototype first used the name “extend” for this operation.
 Object.assign(target, source_1, ..., source_n)
 ```
 
+## Deep merge
+
+```javascript
+/**
+ * Simple object check.
+ * @param item
+ * @returns {boolean}
+ */
+export function isObject(item) {
+  return (item && typeof item === 'object' && !Array.isArray(item));
+}
+
+/**
+ * Deep merge two objects.
+ * @param target
+ * @param ...sources
+ */
+export function mergeDeep(target, ...sources) {
+  if (!sources.length) return target;
+  const source = sources.shift();
+
+  if (isObject(target) && isObject(source)) {
+    for (const key in source) {
+      if (isObject(source[key])) {
+        if (!target[key]) Object.assign(target, { [key]: {} });
+        mergeDeep(target[key], source[key]);
+      } else {
+        Object.assign(target, { [key]: source[key] });
+      }
+    }
+  }
+
+  return mergeDeep(target, ...sources);
+}
+```
+
+### example
+
+```javascript
+mergeDeep(this, { a: { b: { c: 123 } } });
+// or
+const merged = mergeDeep({a: 1}, { b : { c: { d: { e: 12345}}}});  
+console.dir(merged); // { a: 1, b: { c: { d: [Object] } } }
+```
+
 ## Reference
 
 * [stack overflow](http://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically)
 * [ECMAScript 6: merging objects via Object.assign()](http://www.2ality.com/2014/01/object-assign.html)
+* [stack overflow](https://stackoverflow.com/questions/27936772/how-to-deep-merge-instead-of-shallow-merge)
