@@ -6,6 +6,12 @@ wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-
 
 상단의 코드에 ``[URL]``부분에 다운로드 받고자하는 URL을 넣어 사용하면 된다. (URL은 다운로드 페이지에서 요소 검사로 확인 가능하다.)
 
+```
+wget --user=[id] --password=[pw] [url]
+```
+
+인증 정책이 바뀌었는지 처음 언급한 방법으로 되지않는다. 상단과 같이 처리하면 다운받을 수 있다.
+
 ### UPDATED FOR JDK 8u92
 
 ##### RPM:
