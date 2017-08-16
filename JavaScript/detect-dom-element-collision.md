@@ -1,4 +1,4 @@
-# Detect dome collision
+# Detect dom element collision
 
 ```javascript
 var rect1 = rect1Dom.getBoundingClientRect();
