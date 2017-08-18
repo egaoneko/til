@@ -1,0 +1,17 @@
+# Delete files recursively in Windows
+
+## Issue
+
+코드의 실수로 반복적으로 자신을 가지는 깊은 폴더 구조가 생성되어 삭제가 되지 않는 이슈가 발생했다.
+
+## Solution
+
+```sh
+robocopy \empty_folder \folder_with_sub_folders /PURGE
+```
+
+위와 같은 명령으로 해결하였다.
+
+## Reference
+
+* [stack overflow](https://stackoverflow.com/questions/4756203/how-to-delete-files-recursively)
