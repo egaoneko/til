@@ -39,3 +39,37 @@ public class InjectMocksTest() {
     }
 }
 ```
+
+## Interface or Abstract Class Test
+
+```java
+public interface TestInterface {
+    String interfaceMethod1();
+    String interfaceMethod2();
+}
+
+public abstract class TestBody<T extends TestInterface>() {
+    public abstract void abstractMethod();
+    T bodyMethod(T param) {
+        return param;
+    }
+}
+
+public class TestBodyTest() {
+    private TestBody mockTestBody = Mockito.mock(TestBody.class, Mockito.CALLS_REAL_METHOD);
+    private TestInterface mockTestInterface = Mockito.mock(TestInterface.class);
+    
+    @Test
+    public void testBodyMethod() {
+        // given
+        when(mockTestInterface.interfaceMethod1()).thenReturn("TEST");
+        ...
+        
+        // when
+        String actual = bodyMethod();
+        
+        // then
+        ...
+        verify(mockTestInterface, times(1)).interfaceMethod1();
+}
+```
