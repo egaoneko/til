@@ -58,13 +58,13 @@ console.log(typeof(b)) // undefined
 * isInfinity()
 * NaN(Not a Number) : 숫자를 반환할 것으로 의도한 조작이 실패했을 때 반환됨
 	* NaN == NaN => false
-	* Number(), parseInt(), parseFload() : 가능하면 명확하게 parseInt(n, 10);을 권장
+	* Number(), parseInt(), parseFloat() : 가능하면 명확하게 parseInt(n, 10);을 권장
 
 ## 문자열
 
 * immutable
 * (“), (“”), (``)(es6 template)
-* toString; (Number는 진법 파라미터 존재)
+* toString(); (Number는 진법 파라미터 존재)
 * String();
 
 ```javascript
@@ -98,16 +98,16 @@ stacktrace에서 anonymous 와 add
 
 ```javascript
 /**
- * anonymous
- */
-	var add = function(a, b) {
-		return a + b;
-	};
+* anonymous
+*/
+var add = function(a, b) {
+    return a + b;
+};
 
-	var obj = {
-		add: add
-	};
-	obj.add(5, 10);
+var obj = {
+    add: add
+};
+obj.add(5, 10);
 
 /**
  * 기명함수 표현
@@ -131,8 +131,8 @@ obj.add(5, 10);
 
 ```javascript
 function add(a, b) {
-    a === arguments[0] ;
-    b === arguments[1]1;
+    a === arguments[0];
+    b === arguments[1];
     return a + b;
 }
 ```
@@ -145,8 +145,8 @@ function add(a, b) {
 
 ```javascript
 function setName(obj) {
-obj.name = "jone";
-obj = {name: 'greg'};
+    obj.name = "jone";
+    obj = {name: 'greg'};
 }
 
 var person = {};
@@ -160,7 +160,7 @@ console.log(person.name); // Jhon
 
 ```javascript
 function test() {
-	var i = 10;
+    var i = 10;
     
     for (var i=0; i<10; i+= 1) {
     
@@ -169,7 +169,7 @@ function test() {
 
 // 권장
 function test() {
-	var i = 10;
+    var i = 10;
     
     for (i=0; i<10; i+= 1) {
     
@@ -182,7 +182,7 @@ function test() {
 ```javascript
 /* GLOBAL */
 function foo() {
-	/* scope of foo */
+    /* scope of foo */
     function bar() {/* scope of bar */};
     bar();
 }
@@ -209,7 +209,7 @@ foo();
 
 ```javascript
 function foo(a) {
-	 console.log(a);
+    console.log(a);
 }
 
 foo('b');
@@ -232,7 +232,7 @@ var a = 2; // LHS
 
 ```javascript
 function foo(a) {
-	 console.log(a);
+    console.log(a);
 }
 foo('b');
 ```
@@ -248,7 +248,7 @@ foo('b');
 
 ```javascript
 function foo(a) {
-	 console.log(a);
+    console.log(a);
 }
 foo('b');
 ```
@@ -262,7 +262,7 @@ foo('b');
 
 ```javascript
 function foo(a) {
-	console.log(a + b);
+    console.log(a + b);
 }
 
 var b = 2;
@@ -278,7 +278,7 @@ foo(2); //4
 
 ```javascript
 function foo(a) {
-	b = a;
+    b = a;
 }
 
 foo(2);
@@ -298,7 +298,7 @@ foo(2);
 
 ```javascript
 function foo(a) {  // scope: a로 고정(시행되고 끝날때까지 어디서 실행되던지 관련 없이)
-	function bar(b) { // scope: b로 고정
+    function bar(b) { // scope: b로 고정
     	console.log(a + b);
     }
     bar(3);
@@ -308,13 +308,13 @@ foo(2);
 
 ```javascript
 function foo(code) {
-	eval(code);
+    eval(code);
     b = 3;
 }
 foo('var b - 2');
 
 function foo(obj) {
- 	with(obj) {
+    with(obj) {
     	b = 2;
     }
 }
@@ -343,7 +343,7 @@ alert(a);
 
 ```javascript
 function foo() {
-	a = 2;
+    a = 2;
     var a;
     console.log(a);
 }
@@ -360,7 +360,6 @@ foo();
 function foo() {/* .... */}
 ```
 
-
 * 함수 선언문이 `끌어올려`진 현상
 * 우선순위는 함수 > 변수
 
@@ -370,7 +369,7 @@ function foo() {/* .... */}
 
 ```javascript
 function foo() {
-	var a = 2;
+    var a = 2;
 
     // bar는 foo의 scope에 선언됨
     function bar() {
@@ -386,12 +385,12 @@ baz(); // bar가 여기서 실행됨 (Global Contenxt)
 
 ```javascript
 function foo() {
-       	var a = 2;
+    var a = 2;
 
-       	function bar() {
-       		return ++a;
-       	}
-       	return bar;
+    function bar() {
+        return ++a;
+    }
+    return bar;
 }
 
 var baz1 = foo();
@@ -415,10 +414,10 @@ for (var i=1; i <= 5; i++){
 
 ```javascript
 for (var i=1; i <= 5; i++){
-	setTimeout(function(j){
-    	functin() {
-    		console.log(i);
-    	}}(i), i*1000);
+    setTimeout(function(j){
+    functin() {
+        console.log(i);
+    }}(i), i*1000);
 }
 // 1, 2, 3, 4, 5
 ```
@@ -427,7 +426,7 @@ for (var i=1; i <= 5; i++){
 
 ```javascript
 var myModule = (function() {
-	function privateMethod() {}
+    function privateMethod() {}
 
     function publicMethod() {
     	privateMethod();
@@ -482,8 +481,7 @@ delete obj; // obj = undefined
 * IE8은 DOM만 적용 가능
 * 객체의 프로퍼티에 특별한 속성을 적용
 * 접근제한자 비스무리
-
-[Object.defineProperty()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 참조
+* [Object.defineProperty()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 참조
 
 ## THIS
 
@@ -557,6 +555,16 @@ func.apply(objThis, [param]);
 func.bind(objThis);
 ```
 
+* apply, call로 구현이 가능
+
+```javascript
+function bind(objThis) {
+    return function() {
+        objThis.apply(objThis, arguments);
+    }
+}
+```
+
 ## 팩터리 함수로 객체 생성(생성자)
 
 * 중복된 객체를 생성할때 리터럴은 부적합 함.
@@ -566,11 +574,11 @@ func.bind(objThis);
 
 ```javascript
 var pserson = {
-	name: 'Steve Jobs',
+    name: 'Steve Jobs',
 };
 
 function createPerson(name) {
-	var newPerson = {};
+    var newPerson = {};
     newPerson.name = name;
     return newPerson;
 }
@@ -585,19 +593,19 @@ var person2 = createPerson("Person2");
 var person = Person('Steve Job');
 
 function Person(name) {
-this = window; // 1. 새로운 객체를 만들어 window를 대입한다.
-//프로토타입을 연결하는 과정은 일단 생략(이후 설명)
-this.name = name; // 2. 함수의 코드를 실행
-return undefined; // 3. undefined를 리턴한다.
+    this = window; // 1. 새로운 객체를 만들어 window를 대입한다.
+    //프로토타입을 연결하는 과정은 일단 생략(이후 설명)
+    this.name = name; // 2. 함수의 코드를 실행
+    return undefined; // 3. undefined를 리턴한다.
 }
 
 var person = new Person('Steve Job');
 
 function Person(name) {
-this = {}; // 1. 새로운 객체를 만들어 this를 대입한다.
-//프로토타입을 연결하는 과정은 일단 생략(이후 설명)
-this.name = name; // 2. 함수의 코드를 실행
-return this; // 3. 만들어진 객체를 리턴한다.
+    this = {}; // 1. 새로운 객체를 만들어 this를 대입한다.
+    //프로토타입을 연결하는 과정은 일단 생략(이후 설명)
+    this.name = name; // 2. 함수의 코드를 실행
+    return this; // 3. 만들어진 객체를 리턴한다.(단, 명시적인 객체 리턴이 있을 경우 해당 객체를 반환, 객체 이외는 this를 반환한다.)
 }
 ```
 
@@ -621,7 +629,7 @@ human instanceof Human // true
 
 ```javascript
 function Person(firstName, lastName) {
-	this.firstName = firstName;
+    this.firstName = firstName;
     this.lastName = lastName;
     
     getFullName = function () {
@@ -634,7 +642,7 @@ function Person(firstName, lastName) {
 
 ```javascript
 function Person(firstName, lastName) {
-	this.firstName = firstName;
+    this.firstName = firstName;
     this.lastName = lastName;
 }
 
@@ -653,12 +661,12 @@ function PersonMethod() {
 
 ```javascript
 function Person(firstName, lastName) {
-	this.firstName = firstName;
+    this.firstName = firstName;
     this.lastName = lastName;
 }
 
 Person.prototype.getFullName = function () {
-    	return this.firstName + this.lastName;
+    return this.firstName + this.lastName;
 }
 ```
 
@@ -760,7 +768,7 @@ console.log("isChildMethod", p2.hasOwnProperty("cMethod3")); // true
 
 ```javascript
 function Parent() {
-	this.name = 'myName';
+    this.name = 'myName';
 }
 
 ....
@@ -775,7 +783,7 @@ Child.prototype.constructor = Parent // Child가 아닌 Person이 설정되어�
 
 ```javascript
 function Parent() {
-	this.name = 'myName';
+    this.name = 'myName';
 }
 
 function Ghost() {} // 부모의 프로퍼티 제거
@@ -795,7 +803,7 @@ Child.prototype.name == 'undefined'
 
 ```javascript
 function Parent() {
-	this.name = 'myName';
+    this.name = 'myName';
 }
 
 Child.prototype = Object.create(Parent.prototype);
@@ -803,6 +811,103 @@ Child.prototype.constructor = Child
 
 Child.prototype.name == 'undefined'
 ```
+
+## 프로토타입 체인 상속의 문제
+
+```javascript
+function SuperType(name) {
+    this.name = name;
+    this.colors = ["red", "blue", "green"];
+}
+
+function SubType() {
+}
+
+SubType.prototype = new SuperType();
+
+var instance1 = new SubType();
+instance1.colors.push("black");
+alert(instance1.colors); // "red,blue,green,black"
+
+var instance2 = new SubType();
+alert(instance2.colors); // "red,blue,green,black"
+```
+
+* 하위 타입 인스턴스에서 상위 타입에 있는 프로퍼티를 공유하게 된다.
+* 히위 타입 인스턴스를 만들때 상위 타입 생성자에 매개변수를 전달할 수 없다.
+
+## 상속 (생성자 훔치기)
+
+```javascript
+function SuperType(name) {
+    this.name = name;
+    this.colors = ["red", "blue", "green"];
+}
+
+function SubType(name, age) {
+    
+    // 프로퍼티 상속
+    SuperType.call(this, name);
+    
+    this.age = age;
+}
+
+var instance1 = new SubType("Frank1", 27);
+instance1.colors.push("black");
+alert(instance1.colors); // "red,blue,green,black"
+alert(instance1.name); // "Frank1"
+alert(instance1.age); // 27
+
+var instance2 = new SubType("Frank2", 28);
+alert(instance2.colors); // "red,blue,green"
+alert(instance2.name); // "Frank2"
+alert(instance2.age); // 28
+```
+
+* 상위 타입의 객체 초기화 코드 전체를 하위 타입 객체에서 실행하는 효과가 있어, 모든 인스턴스가 자신만의 프로퍼리를 갖게된다.
+* 상위 타입에 매개 변수를 전달할 수 있다.
+
+## 생성자 훔치기 상속의 문제
+
+* 메서드를 생성자 내부에서만 정의해야 하무로 함수 재사용이 불가능해진다.
+* 상위 타입의 프로토타입에 정의한 메서드를 하위 타입에서 접근할 수 없다.
+
+## 상속 (조합 상속)
+
+```javascript
+function SuperType(name) {
+    this.name = name;
+    this.colors = ["red", "blue", "green"];
+}
+
+SuperType.prototype.sayName = function(){alert(this.name);};
+
+function SubType(name, age) {
+    
+    // 프로퍼티 상속
+    SuperType.call(this, name);
+    
+    this.age = age;
+}
+
+// 메서드 상속
+SubType.prototype = new SubType();
+
+SubType.prototype.sayAge = function() {alert(this.age);};
+
+var instance1 = new SubType("Frank1", 27);
+instance1.colors.push("black");
+alert(instance1.colors); // "red,blue,green,black"
+instance1.sayName(); // "Frank1"
+instance1.sayAge(); // 27
+
+var instance2 = new SubType("Frank2", 28);
+alert(instance2.colors); // "red,blue,green"
+instance2.sayName(); // "Frank2"
+instance2.sayAge(); // 28
+```
+
+* 프로토타입 체인과 생성자 훔치기 패턴을 조합하여, 두 상속의 단점을 해결한다.
 
 ## 메서드 오버라이드
 
@@ -825,8 +930,8 @@ p2.getName = function() {}; // 우선순위 1
 
 ```javascript
 function Todo (context) {
-        this.isComplete = false;
-        this.context = context;
+    this.isComplete = false;
+    this.context = context;
 }
 
 Todo.prototype.getContext = function(){
