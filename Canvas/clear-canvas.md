@@ -35,3 +35,4 @@ context.restore();
 ### Reference
 
 * [How you clear your HTML5 Canvas matters](http://simonsarris.com/blog/346-how-you-clear-your-canvas-matters)
+* [JSPerf](https://jsperf.com/canvas-clear-speed)
